@@ -1,0 +1,9 @@
+siteConfig:
+  title: Portfolio - Ayushman Bilas Thakur
+
+permalinks:
+  post: /posts/:slug
+  page: /:slug
+
+plugins:
+  - resolve: saber-plugin-query-posts

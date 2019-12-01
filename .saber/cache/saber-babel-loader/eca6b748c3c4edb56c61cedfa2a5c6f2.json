@@ -1,0 +1,1 @@
+{"ast":null,"code":"import createApp from './create-app';\n\nvar _createApp = createApp(),\n    app = _createApp.app,\n    router = _createApp.router;\n\nif (process.env.NODE_ENV === 'development') {\n  require('./dev-client').init({\n    router: router\n  });\n}\n\nrouter.onReady(function () {\n  app.$mount('#_saber');\n});","map":null,"metadata":{},"sourceType":"module"}

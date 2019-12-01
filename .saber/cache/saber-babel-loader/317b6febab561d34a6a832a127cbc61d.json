@@ -1,0 +1,1 @@
+{"ast":null,"code":"//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nimport downloadResume from \"./downloadResume.vue\";\nexport default {\n  components: {\n    downloadResume: downloadResume\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

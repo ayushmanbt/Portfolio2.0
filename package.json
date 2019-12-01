@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-ayushman",
+  "version": "1.0.0",
+  "description": "Portfolio of a fullstack web developer Ayushman Bilas Thakur",
+  "main": "index.js",
+  "scripts": {
+    "dev": "saber",
+    "build": "saber build"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "fullstack-web-development"
+  ],
+  "author": "Ayushma Bilas Thakur",
+  "license": "MIT",
+  "dependencies": {
+    "@mdi/font": "^4.6.95",
+    "saber": "^0.11.3",
+    "saber-plugin-query-posts": "^0.4.5"
+  }
+}

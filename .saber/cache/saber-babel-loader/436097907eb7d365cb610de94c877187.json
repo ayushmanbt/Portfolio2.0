@@ -1,0 +1,1 @@
+{"ast":null,"code":"if (process.browser) {\n  window.Promise = window.Promise || require('./vendor/promise');\n  Object.assign = require('object-assign');\n}","map":null,"metadata":{},"sourceType":"module"}

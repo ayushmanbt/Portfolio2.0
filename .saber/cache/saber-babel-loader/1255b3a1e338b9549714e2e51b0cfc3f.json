@@ -1,0 +1,1 @@
+{"ast":null,"code":"var themeBrowserApi;\n\nvar rTheme = require.context('#theme', false, /\\.\\/saber-browser\\.[jt]s$/);\n\nrTheme.keys().forEach(function (k) {\n  themeBrowserApi = rTheme(k)[\"default\"];\n});\nexport default function (context) {\n  typeof themeBrowserApi === 'function' && themeBrowserApi(context);\n}","map":null,"metadata":{},"sourceType":"module"}
