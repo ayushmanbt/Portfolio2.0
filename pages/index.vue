@@ -31,16 +31,26 @@
         <downloadResume />
       </div>
     </div>
-
-    <h1 class="heading">MY SKILLS</h1>
-
+    <br />
+    <h1 class="heading">SKILLS</h1>
+    <div class="skill-part">
+      <skillBlock heading="WEB DEV ESSENTIALS" :skills="JSON.stringify(skl.slice(0,3))" />
+      <skillBlock heading="FRONTEND FRAMEWORKS" :skills="JSON.stringify(skl.slice(3,6))" />
+      <skillBlock heading="BACKEND TECHNOLOGIES" :skills="JSON.stringify(skl.slice(6,8))" />
+      <skillBlock heading="OTHERS" :skills="JSON.stringify(skl.slice(8,10))" />
+    </div>
+    <br />
     <h1 class="heading">HOBBIES</h1>
+    <skills name="UI/UX Development" mdi="mdi-cellphone" color="#000000" />
   </div>
 </template>
 
 <script>
 import socialLinks from "../components/socialLinks.vue";
 import downloadResume from "../components/downloadResume.vue";
+import skills from "../components/skills.vue";
+import skillBlock from "../components/skillBlock";
+import skillList from "../images/skills.json";
 
 export const data = {
   layout: "default",
@@ -50,7 +60,14 @@ export const data = {
 export default {
   components: {
     socialLinks,
-    downloadResume
+    downloadResume,
+    skills,
+    skillBlock
+  },
+  data() {
+    return {
+      skl: skillList
+    };
   }
 };
 </script>
@@ -68,6 +85,14 @@ export default {
 
 .my-pic {
   display: none;
+}
+
+.skill-part {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 5px 20px;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 750px) {

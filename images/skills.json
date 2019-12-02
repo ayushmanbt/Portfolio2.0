@@ -1,0 +1,52 @@
+[
+  {
+    "name": "HTML5",
+    "mdi": "mdi-language-html5",
+    "color": "#F23E0F"
+  },
+  {
+    "name": "CSS3",
+    "mdi": "mdi-language-css3",
+    "color": "#2965F1"
+  },
+  {
+    "name": "JavaScript",
+    "mdi": "mdi-language-javascript",
+    "color": "#D4B200"
+  },
+  {
+    "name": "React",
+    "mdi": "mdi-react",
+    "color": "#00BBB0"
+  },
+  {
+    "name": "Angular",
+    "mdi": "mdi-angular",
+    "color": "#C70000"
+  },
+  {
+    "name": "Vue",
+    "mdi": "mdi-vuejs",
+    "color": "#5E8960"
+  },
+  {
+    "name": "Node.JS + Express",
+    "mdi": "mdi-nodejs",
+    "color": "#005403"
+  },
+  {
+    "name": "Flask(Python)",
+    "mdi": "mdi-server",
+    "color": "#2965F1"
+  },
+  {
+    "name": "C and C++",
+    "mdi": "mdi-alpha-c-box",
+    "color": "#EE1E1E"
+  },
+  {
+    "name": "Game Development with Unity and C#",
+    "mdi": "mdi-unity",
+    "color": "#000000"
+  }
+]

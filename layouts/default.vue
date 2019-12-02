@@ -75,7 +75,13 @@ export default {
     return {
       title: pageTitle
         ? `${pageTitle} - ${this.$siteConfig.title}`
-        : this.$siteConfig.title
+        : this.$siteConfig.title,
+      link: [
+        {
+          rel: "icon",
+          href: "/favicon.ico"
+        }
+      ]
     };
   }
 };

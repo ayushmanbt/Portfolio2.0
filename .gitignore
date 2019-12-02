@@ -76,6 +76,9 @@ typings/
 # next.js build output
 .next
 
+# saber.js build
+.saber
+
 # nuxt.js build output
 .nuxt
 
