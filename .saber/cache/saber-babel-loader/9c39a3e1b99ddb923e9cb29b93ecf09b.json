@@ -1,1 +1,0 @@
-{"ast":null,"code":"//\n//\n//\n//\nexport default {};","map":{"version":3,"sources":["homepage.vue"],"names":[],"mappings":";;;;AAKA,eAAA,EAAA","sourcesContent":["<template>\r\n    <h1>Hello Saber!</h1>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n    \r\n}\r\n</script>\r\n\r\n<style>\r\n\r\n</style>"],"sourceRoot":"pages"},"metadata":{},"sourceType":"module"}

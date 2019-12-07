@@ -1,1 +1,0 @@
-{"ast":null,"code":"var layouts = {};\nimport layout_0 from \"C:/Users/ayush/Desktop/Portfolio 2.0/layouts/default.vue\";\nlayouts[\"default\"] = layout_0;\nexport default layouts;","map":null,"metadata":{},"sourceType":"module"}
