@@ -49,7 +49,7 @@ export default {
 <style scoped>
 nav {
   position: relative;
-  padding: 0 20px;
+  padding: 0 40px;
   background: #fff49f;
   min-height: 100vh;
   display: flex;
@@ -119,7 +119,6 @@ h1 {
 }
 
 img {
-  display: block;
   width: 150px;
   border-radius: 200px;
   margin-bottom: 20px;
@@ -128,5 +127,8 @@ img {
   margin-top: 40px;
 }
 @media only screen and (max-width: 800px) {
+  nav {
+    padding: 0;
+  }
 }
 </style>

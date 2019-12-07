@@ -1,0 +1,27 @@
+[
+  {
+    "title": "FrontEnd Web Developer",
+    "company_name": "Adben Industries Pvt. Ltd.",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Django"],
+    "description": "Before I stepped in Adben Industries Pvt. Ltd. had no website. They wanted a website where they can tell people about their upcoming courses and products for IoT. Me and my friend Ritankar Paul (check him out as well, he is an awesome guy!) made this website for Adben and the work is still in progress",
+    "links": [
+      {
+        "type": "normal",
+        "link": "https://adben.in/"
+      }
+    ]
+  },
+  {
+    "title": "Freelance Writer",
+    "company_name": "agatton.com.",
+    "technologies": ["writing"],
+    "description": "As my first year internship I worked as a freelance writer at agatton.com. Writing is my hobby",
+    "links": [
+      {
+        "type": "normal",
+        "link": "https://agatton.com/author/ayushman5/"
+      }
+    ],
+    "tileImage": "../images/agatton.png"
+  }
+]

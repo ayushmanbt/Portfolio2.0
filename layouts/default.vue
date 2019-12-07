@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-    <div id="left-bar">
+    <div id="left-bar" data-simplebar>
       <leftSidebar />
       <div class="cross-button" v-on:click="close()">
         <span class="mdi mdi-close-box"></span>
       </div>
     </div>
-    <div class="open-button" v-on:click="open()">
-      <span class="mdi mdi-arrow-right-box"></span>
-    </div>
-    <div style="width: 100%;">
+
+    <div class="main-content-container" data-simplebar>
+      <div class="open-button" v-on:click="open()">
+        <span class="mdi mdi-arrow-right-box"></span>
+      </div>
       <div class="main-content">
         <slot name="default" />
       </div>
@@ -22,6 +23,8 @@ import leftSidebar from "../components/leftSidebar.vue";
 import socialLinks from "../components/socialLinks.vue";
 import downloadResume from "../components/downloadResume.vue";
 import "@mdi/font/css/materialdesignicons.css";
+import "simplebar";
+import "simplebar/dist/simplebar.css";
 
 export default {
   props: ["page"],
@@ -53,12 +56,15 @@ export default {
     },
     onResize: function() {
       let nav = document.getElementById("left-bar");
+
       if (window.innerWidth > 750 && nav.style.display == "none") {
         this.open();
       }
     }
   },
   mounted() {
+    let nav = document.getElementById("left-bar");
+
     window.addEventListener("resize", this.onResize);
     if (window.innerWidth <= 750)
       window.setTimeout(() => {
@@ -90,6 +96,15 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap");
 
+::-webkit-scrollbar {
+  display: none;
+  width: 0px !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -100,6 +115,12 @@ export default {
   width: 80%;
   margin: 30px auto;
   max-width: 1024px;
+}
+
+.main-content-container {
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 a {
@@ -133,11 +154,13 @@ p {
 }
 
 #left-bar {
-  position: relative;
-
+  height: 100vh;
+  min-width: 400px;
+  top: 0;
   transform-origin: left;
   transition: all 0.3s ease-in-out;
-  min-width: 370px;
+  overflow-y: auto;
+  z-index: 2;
 }
 
 .cross-button {
@@ -148,7 +171,7 @@ p {
 }
 
 .open-button {
-  position: absolute;
+  position: fixed;
   top: -10px;
   left: -10px;
   display: none;
@@ -231,11 +254,11 @@ p {
   }
 
   #left-bar {
-    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 0px;
+    right: 0;
+    min-width: 0;
   }
 }
 

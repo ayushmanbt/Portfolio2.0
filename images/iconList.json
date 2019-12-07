@@ -1,0 +1,16 @@
+{
+  "html5": "mdi-language-html5",
+  "css3": "mdi-language-css3",
+  "javascript": "mdi-language-javascript",
+  "angular": "mdi-angular",
+  "react": "mdi-react",
+  "vuejs": "mdi-vuejs",
+  "express": "mdi-nodejs",
+  "nodejs": "mdi-nodejs",
+  "flask": "mdi-server",
+  "django": "mdi-server",
+  "writing": "mdi-typewriter",
+  "mongodb": "mdi-database",
+  "mysql": "mdi-database",
+  "default": "mdi-cloud-question"
+}

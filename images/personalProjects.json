@@ -1,0 +1,34 @@
+[
+  {
+    "title": "QuotesApp",
+    "company_name": "Flask + Angular 7 CRUD",
+    "technologies": ["Angular", "Flask", "MongoDB"],
+    "description": "A simple CRUD application where users can add data and can remove it(if localstorage stats are stored), Like and dislike otherws quotes",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
+      },
+      {
+        "type": "normal",
+        "link": "https://ayushmanbilasthakur.github.io/QuotesApp/"
+      }
+    ]
+  },
+  {
+    "title": "Portfoilo cum Blog",
+    "company_name": "This very webpage",
+    "technologies": ["VueJS"],
+    "description": "This very webpage is one of my best frontend creations. Built with saber.js (a vue.js framework) this website is static-built like gatsby and is super fast. And using the full potential of React, there are a lot of things here",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
+      },
+      {
+        "type": "normal",
+        "link": "https://www.ayushmanbilasthakur.tk"
+      }
+    ]
+  }
+]
