@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+    <div class="dark-mode-button" v-on:click="toggleDarkMode()">
+      <techIcon name="Toggle Dark Mode" :icon="dark_mode_icon" />
+    </div>
+
     <div id="left-bar" data-simplebar>
       <leftSidebar />
       <div class="cross-button" v-on:click="close()">
@@ -22,6 +26,8 @@
 import leftSidebar from "../components/leftSidebar.vue";
 import socialLinks from "../components/socialLinks.vue";
 import downloadResume from "../components/downloadResume.vue";
+import techIcon from "../components/techIcon";
+
 import "@mdi/font/css/materialdesignicons.css";
 import "simplebar";
 import "simplebar/dist/simplebar.css";
@@ -31,9 +37,28 @@ export default {
   components: {
     leftSidebar,
     socialLinks,
-    downloadResume
+    techIcon
+  },
+  data() {
+    return {
+      dark_mode_icon: "mdi-moon-waning-crescent",
+      dark_mode_light_icon: "mdi-moon-waning-crescent",
+      dark_mode_dark_icon: "mdi-weather-sunny"
+    };
   },
   methods: {
+    toggleDarkMode: function() {
+      // console.log("🙄");
+      let toggle = document.getElementsByClassName("dark-mode-button")[0];
+      if (this.dark_mode_icon === this.dark_mode_light_icon) {
+        this.dark_mode_icon = this.dark_mode_dark_icon;
+      } else {
+        this.dark_mode_icon = this.dark_mode_light_icon;
+      }
+
+      document.body.classList.toggle("dark-mode");
+    },
+
     close: function() {
       let nav = document.getElementById("left-bar");
       let right_arrow = document.getElementsByClassName("open-button")[0];
@@ -64,7 +89,6 @@ export default {
   },
   mounted() {
     let nav = document.getElementById("left-bar");
-
     window.addEventListener("resize", this.onResize);
     if (window.innerWidth <= 750)
       window.setTimeout(() => {
@@ -95,6 +119,25 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap");
+/* 
+html {
+  filter: invert(100%) hue-rotate(-180deg);
+} */
+
+.dark-mode {
+  filter: invert(100%) hue-rotate(-180deg);
+}
+
+.dark-mode img {
+  filter: invert(100%) hue-rotate(-180deg);
+}
+
+.dark-mode-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -121,6 +164,7 @@ export default {
   width: 100%;
   max-height: 100vh;
   overflow-y: auto;
+  background-color: #f2fbbd;
 }
 
 a {
@@ -280,4 +324,13 @@ p {
     font-size: 3.2rem;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    filter: invert(100%) hue-rotate(-180deg);
+  }
+  img {
+    filter: invert(100%) hue-rotate(-180deg);
+  }
+} */
 </style>

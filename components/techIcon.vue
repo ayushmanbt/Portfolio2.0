@@ -33,7 +33,7 @@ export default {
 #individual-tech:hover .mdi,
 #individual-tech:focus .mdi {
   transform: scale(1.2);
-  color: #fff49f;
+  color: #085ba8;
 }
 
 #individual-tech:active .tech-name,
