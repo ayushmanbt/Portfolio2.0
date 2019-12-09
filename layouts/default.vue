@@ -162,7 +162,7 @@ html {
 
 .main-content-container {
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: auto;
   background-color: #f2fbbd;
 }

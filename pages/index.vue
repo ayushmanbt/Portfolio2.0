@@ -83,6 +83,10 @@ export default {
   grid-gap: 10px;
 }
 
+.top-bar > * {
+  margin: 5px 15px;
+}
+
 .my-pic {
   display: none;
 }

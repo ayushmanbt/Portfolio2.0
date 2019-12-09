@@ -54,6 +54,10 @@ h2 {
   grid-gap: 20px;
 }
 
+.cards-container > * {
+  margin: 5px 15px;
+}
+
 @media only screen and (max-width: 750px) {
   .cards-container {
     justify-content: center;
