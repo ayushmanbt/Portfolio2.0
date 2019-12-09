@@ -42,6 +42,19 @@
     <br />
     <h1 class="heading">HOBBIES</h1>
     <skills name="UI/UX Development" mdi="mdi-cellphone" color="#000000" />
+
+    <saber-link to="/projects" class="link-to-project">
+      <p>SEE MY WORK</p>
+      <div class="icon">
+        <span class="mdi mdi-arrow-right-bold"></span>
+      </div>
+    </saber-link>
+    <saber-link to="/contact" class="link-to-project">
+      <p>CONTACT ME</p>
+      <div class="icon">
+        <span class="mdi mdi-arrow-right-bold"></span>
+      </div>
+    </saber-link>
   </div>
 </template>
 
@@ -97,6 +110,40 @@ export default {
   flex-wrap: wrap;
   grid-gap: 5px 20px;
   justify-content: space-between;
+}
+
+.link-to-project {
+  margin-top: 20px;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  justify-content: right;
+  align-items: center;
+}
+
+.link-to-project .mdi {
+  font-size: 2rem;
+  color: #a91b4b;
+}
+
+.icon {
+  transform: translateX(0px);
+  transition: all 0.3s ease-in-out;
+  animation: left_right ease-in-out 0.3s alternate;
+  -moz-animation: left_right ease-in-out 0.3s alternate;
+}
+
+.link-to-project:hover .icon {
+  transform: translateX(10px);
+}
+
+@keyframes left_right {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
 }
 
 @media only screen and (max-width: 750px) {

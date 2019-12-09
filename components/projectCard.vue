@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .card {
-  width: 300px;
+  width: 356px;
   height: fit-content;
   border: 4px solid #5f0926;
   border-radius: 20px;
@@ -83,6 +83,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 20px;
+  margin-right: 20px;
 }
 
 .top-details h2 {
@@ -112,12 +113,15 @@ export default {
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .card {
     width: 95%;
   }
   .top-details p {
     display: none;
+  }
+  .top-details h2 {
+    font-size: 1.2rem !important;
   }
 }
 </style>

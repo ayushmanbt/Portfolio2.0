@@ -20,6 +20,10 @@
           </li>
 
           <li>
+            <saber-link to="/contact" v-on:click="close()" active-class="active" exact>CONTACT ME</saber-link>
+          </li>
+
+          <li>
             <saber-link to="/blog" v-on:click="close()" active-class="active" exact>BLOG</saber-link>
           </li>
         </ul>

@@ -13,9 +13,12 @@
         <projectCard v-for="itsp in personalProjects" :key="itsp.title" :data="itsp" />
       </div>
     </div>
-    <div class="section">
-      <h2 class="heading">HONORABLE MENTIONS</h2>
-    </div>
+    <saber-link to="/contact" class="link-to-project">
+      <p>CONTACT ME</p>
+      <div class="icon">
+        <span class="mdi mdi-arrow-right-bold"></span>
+      </div>
+    </saber-link>
   </div>
 </template>
 
@@ -56,6 +59,27 @@ h2 {
 
 .cards-container > * {
   margin: 5px 15px;
+}
+
+.link-to-project {
+  margin-top: 20px;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  justify-content: right;
+  align-items: center;
+}
+
+.link-to-project .mdi {
+  font-size: 2rem;
+  color: #a91b4b;
+}
+
+.icon {
+  transform: translateX(0px);
+  transition: all 0.3s ease-in-out;
+  animation: left_right ease-in-out 0.3s alternate;
+  -moz-animation: left_right ease-in-out 0.3s alternate;
 }
 
 @media only screen and (max-width: 750px) {

@@ -296,7 +296,12 @@ p {
   .cross-button {
     display: block;
   }
-
+  .dark-mode-button {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+    z-index: 2;
+  }
   #left-bar {
     position: absolute;
     top: 0;

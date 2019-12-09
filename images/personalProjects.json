@@ -30,5 +30,21 @@
         "link": "https://www.ayushmanbilasthakur.tk"
       }
     ]
+  },
+  {
+    "title": "HandyWriter",
+    "company_name": "A web based markdown writer",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "description": "With the help of marked.js this app turns yout markdown to HTML to normal text and HTML",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
+      },
+      {
+        "type": "normal",
+        "link": "https://www.ayushmanbilasthakur.tk"
+      }
+    ]
   }
 ]

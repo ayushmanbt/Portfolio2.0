@@ -66,4 +66,10 @@ export default {
     font-size: 2rem;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .mdi {
+    font-size: 1.5rem;
+  }
+}
 </style>
