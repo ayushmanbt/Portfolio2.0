@@ -13,6 +13,12 @@
         <projectCard v-for="itsp in personalProjects" :key="itsp.title" :data="itsp" />
       </div>
     </div>
+    <div class="section">
+      <h2 class="heading">OTHER PROECTS</h2>
+      <div class="cards-container">
+        <projectCard v-for="itsp in honorableMention" :key="itsp.title" :data="itsp" />
+      </div>
+    </div>
     <saber-link to="/contact" class="link-to-project">
       <p>CONTACT ME</p>
       <div class="icon">
@@ -26,6 +32,7 @@
 import projectCard from "../components/projectCard";
 import internships from "../images/internships.json";
 import personalProjects from "../images/personalProjects.json";
+import honorableMention from "../images/honorableMention.json";
 
 export const data = {
   layout: "default"
@@ -38,7 +45,8 @@ export default {
   data() {
     return {
       internships: internships,
-      personalProjects: personalProjects
+      personalProjects: personalProjects,
+      honorableMention: honorableMention
     };
   }
 };
