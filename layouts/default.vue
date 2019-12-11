@@ -132,6 +132,18 @@ html {
   filter: invert(100%) hue-rotate(-180deg);
 }
 
+.dark-mode .heading {
+  color: #c25700;
+}
+
+.dark-mode a:hover {
+  color: #c25700;
+}
+
+.dark-mode .dark-mode-button:hover {
+  color: #c25700;
+}
+
 .dark-mode-button {
   position: absolute;
   top: 10px;
@@ -164,7 +176,7 @@ html {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  background-color: #f2fbbd;
+  background-color: #ffffff;
 }
 
 a {
@@ -271,6 +283,14 @@ p {
 .yellow-bg:hover {
   background: #776808;
   color: white;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 750px) {
+  #left-bar {
+    min-width: 300px;
+    width: 300px;
+    font-size: 75%;
+  }
 }
 
 @media only screen and (min-width: 750px) {

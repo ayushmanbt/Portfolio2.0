@@ -3,6 +3,14 @@
 </template>
 
 <style scoped>
+.dark-mode .download-resume {
+  background: #c25700;
+}
+
+.dark-mode .download-resume:hover {
+  background: #e96900;
+}
+
 .download-resume {
   padding: 10px 30px;
   background: #a91b4b;

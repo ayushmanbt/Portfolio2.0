@@ -44,15 +44,35 @@ export default {
 };
 </script>
 
+
+
 <style scoped>
 .card {
   width: 356px;
   height: fit-content;
-  border: 4px solid #5f0926;
+  border: 4px solid #a8502d;
   border-radius: 20px;
 }
+
+.dark-mode .card {
+  border: 4px solid #e68e6b;
+  background: #ccc;
+}
+
+.dark-mode .card .top-img {
+  background: #fff;
+  color: #000;
+}
+.dark-mode .card .top-img img {
+  opacity: 0.3;
+}
+
+.dark-mode .card .top-details h2 {
+  color: #004100;
+}
+
 .top-img {
-  background: #000;
+  background: #000000;
   color: #eee;
   position: relative;
   border-radius: 16px 16px 0 0;
@@ -105,6 +125,12 @@ export default {
   align-items: center;
   grid-gap: 10px;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 750px) {
+  .top-details h2 {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 750px) {

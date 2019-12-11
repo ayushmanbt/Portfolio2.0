@@ -3,7 +3,7 @@
     <nav id="nav">
       <div class="top">
         <img src="../images/me.jpeg" alt />
-        <h1>Ayushman Bilas Thakur</h1>
+        <h1 class="heading">Ayushman Bilas Thakur</h1>
         <p>Fullstack web development</p>
         <p>Part time blogging</p>
         <downloadResume class="downloadResume" />
@@ -51,6 +51,22 @@ export default {
 </script>
 
 <style scoped>
+.dark-mode nav {
+  background: #d9e0d7;
+}
+
+.dark-mode .active {
+  background: #c25700;
+}
+
+.dark-mode a:hover {
+  color: #c25700;
+}
+
+.dark-mode .active:hover {
+  color: #fff;
+}
+
 nav {
   position: relative;
   padding: 0 40px;
@@ -130,6 +146,15 @@ img {
 .links {
   margin-top: 40px;
 }
+
+/* @media only screen and (max-width: 950px) and (min-width: 750px) {
+  nav {
+    width: 300px;
+    font-size: 75%;
+    padding: 0px;
+  }
+} */
+
 @media only screen and (max-width: 800px) {
   nav {
     padding: 0;

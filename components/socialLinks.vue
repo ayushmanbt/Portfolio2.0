@@ -19,6 +19,10 @@
 </template>
 
 <style scoped>
+.dark-mode .mdi:hover {
+  color: #c25700;
+}
+
 .social-links {
   display: flex;
   width: fit-content;
@@ -33,9 +37,6 @@ a::before {
   display: none;
 }
 
-a:visited {
-  color: initial;
-}
 .mdi {
   font-size: 30px;
 }

@@ -39,11 +39,27 @@
     "links": [
       {
         "type": "github",
-        "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
+        "link": "https://github.com/AyushmanBilasThakur/HANDYWRITER"
       },
       {
         "type": "normal",
-        "link": "https://www.ayushmanbilasthakur.tk"
+        "link": "https://ayushmanbilasthakur.github.io/HANDYWRITER/"
+      }
+    ]
+  },
+  {
+    "title": "Simple Parallex Effect",
+    "company_name": "Pure HTML,CSS,JS landing page",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "description": "Without using any frameworks like bootstrap, I made this landing page with parallex scrolling, animated buttons and scroll to postion, this is basically a CSS showcase of my skills",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/ReallySimpleParallexEffect"
+      },
+      {
+        "type": "normal",
+        "link": "https://ayushmanbilasthakur.github.io/ReallySimpleParallexEffect/"
       }
     ]
   }
