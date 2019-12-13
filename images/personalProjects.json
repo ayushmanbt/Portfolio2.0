@@ -1,11 +1,9 @@
-[
-  {
+[{
     "title": "QuotesApp",
     "company_name": "Flask + Angular 7 CRUD",
     "technologies": ["Angular", "Flask", "MongoDB"],
     "description": "A simple CRUD application where users can add data and can remove it(if localstorage stats are stored), Like and dislike otherws quotes",
-    "links": [
-      {
+    "links": [{
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
       },
@@ -16,12 +14,11 @@
     ]
   },
   {
-    "title": "Portfoilo cum Blog",
+    "title": "Portfoilo + Blog",
     "company_name": "This very webpage",
     "technologies": ["VueJS"],
     "description": "This very webpage is one of my best frontend creations. Built with saber.js (a vue.js framework) this website is static-built like gatsby and is super fast. And using the full potential of React, there are a lot of things here",
-    "links": [
-      {
+    "links": [{
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
       },
@@ -36,8 +33,7 @@
     "company_name": "A web based markdown writer",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
     "description": "With the help of marked.js this app turns yout markdown to HTML to normal text and HTML",
-    "links": [
-      {
+    "links": [{
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/HANDYWRITER"
       },
@@ -52,8 +48,7 @@
     "company_name": "Pure HTML,CSS,JS landing page",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
     "description": "Without using any frameworks like bootstrap, I made this landing page with parallex scrolling, animated buttons and scroll to postion, this is basically a CSS showcase of my skills",
-    "links": [
-      {
+    "links": [{
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/ReallySimpleParallexEffect"
       },
