@@ -35,7 +35,8 @@ import personalProjects from "../images/personalProjects.json";
 import honorableMention from "../images/honorableMention.json";
 
 export const data = {
-  layout: "default"
+  layout: "default",
+  title: "Projects"
 };
 
 export default {

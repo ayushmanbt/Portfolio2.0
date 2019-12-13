@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="my-pic">
       <img src="../images/me.jpeg" alt />
     </div>

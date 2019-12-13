@@ -124,6 +124,9 @@ html {
   filter: invert(100%) hue-rotate(-180deg);
 } */
 
+* {
+  box-sizing: border-box;
+}
 .dark-mode {
   filter: invert(100%) hue-rotate(-180deg);
 }

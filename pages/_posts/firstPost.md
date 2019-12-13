@@ -3,6 +3,7 @@ title: Making of my Portfolio Website
 date: 2019-11-29
 layout: default
 slug: making-of-portfolio-website
+desc: How this very website works. Pros and Cons I like and don't like
 ---
 
 # Making of my Portfolio Website
