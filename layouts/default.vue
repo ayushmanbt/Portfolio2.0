@@ -4,14 +4,14 @@
       <techIcon name="Toggle Dark Mode" :icon="dark_mode_icon" />
     </div>
 
-    <div id="left-bar" data-simplebar>
+    <div id="left-bar">
       <leftSidebar />
       <div class="cross-button" v-on:click="close()">
         <span class="mdi mdi-close-box"></span>
       </div>
     </div>
 
-    <div class="main-content-container" data-simplebar>
+    <div class="main-content-container">
       <div class="open-button" v-on:click="open()">
         <span class="mdi mdi-arrow-right-box"></span>
       </div>
@@ -110,6 +110,11 @@ export default {
         {
           rel: "icon",
           href: "/favicon.ico"
+        },
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates&display=swap"
         }
       ]
     };

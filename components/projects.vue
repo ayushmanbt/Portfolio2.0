@@ -19,12 +19,6 @@
         <projectCard v-for="itsp in honorableMention" :key="itsp.title" :data="itsp" />
       </div>
     </div>
-    <saber-link to="/contact" class="link-to-project">
-      <p>CONTACT ME</p>
-      <div class="icon">
-        <span class="mdi mdi-arrow-right-bold"></span>
-      </div>
-    </saber-link>
   </div>
 </template>
 
@@ -34,10 +28,10 @@ import internships from "../images/internships.json";
 import personalProjects from "../images/personalProjects.json";
 import honorableMention from "../images/honorableMention.json";
 
-export const data = {
-  layout: "default",
-  title: "Projects"
-};
+// export const data = {
+//   layout: "default",
+//   title: "Projects"
+// };
 
 export default {
   components: {

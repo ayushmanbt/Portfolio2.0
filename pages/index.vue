@@ -43,18 +43,12 @@
     <h1 class="heading">HOBBIES</h1>
     <skills name="UI/UX Development" mdi="mdi-cellphone" color="#000000" />
 
-    <saber-link to="/projects" class="link-to-project">
-      <p>SEE MY WORK</p>
-      <div class="icon">
-        <span class="mdi mdi-arrow-right-bold"></span>
-      </div>
-    </saber-link>
-    <saber-link to="/contact" class="link-to-project">
-      <p>CONTACT ME</p>
-      <div class="icon">
-        <span class="mdi mdi-arrow-right-bold"></span>
-      </div>
-    </saber-link>
+    <br />
+
+    <Projects id="#projects" />
+    <br />
+
+    <Contact />
   </div>
 </template>
 
@@ -64,6 +58,8 @@ import downloadResume from "../components/downloadResume.vue";
 import skills from "../components/skills.vue";
 import skillBlock from "../components/skillBlock";
 import skillList from "../images/skills.json";
+import Projects from "../components/projects";
+import Contact from "../components/contact";
 
 export const data = {
   layout: "default",
@@ -75,7 +71,9 @@ export default {
     socialLinks,
     downloadResume,
     skills,
-    skillBlock
+    skillBlock,
+    Projects,
+    Contact
   },
   data() {
     return {

@@ -23,10 +23,10 @@
 
 
 <script>
-export const data = {
-  layout: "default",
-  title: ""
-};
+// export const data = {
+//   layout: "default",
+//   title: ""
+// };
 export default {
   mounted: {}
 };
@@ -34,11 +34,11 @@ export default {
 
 
 <style scoped>
-h1 {
+/* h1 {
   text-align: center;
-}
+} */
 form {
-  margin: 20px auto;
+  margin: 20px 10px;
   width: 500px;
   height: fit-content;
   background: white;

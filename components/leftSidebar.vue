@@ -12,15 +12,7 @@
       <div>
         <ul>
           <li>
-            <saber-link to="/" v-on:click="close()" active-class="active" exact>ABOUT ME</saber-link>
-          </li>
-
-          <li>
-            <saber-link to="/projects" v-on:click="close()" active-class="active" exact>PROJECTS</saber-link>
-          </li>
-
-          <li>
-            <saber-link to="/contact" v-on:click="close()" active-class="active" exact>CONTACT ME</saber-link>
+            <saber-link to="/" v-on:click="close()" active-class="active" exact>PORTFOLIO</saber-link>
           </li>
 
           <li>
@@ -158,6 +150,24 @@ img {
 @media only screen and (max-width: 800px) {
   nav {
     padding: 0;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .downloadResume {
+    margin-top: 0px;
+  }
+  img {
+    width: 120px;
+    border-radius: 200px;
+    margin-bottom: 10px;
+  }
+  .top {
+    margin-bottom: 10px;
+  }
+
+  p {
+    display: none;
   }
 }
 </style>
