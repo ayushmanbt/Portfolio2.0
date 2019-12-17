@@ -16,6 +16,9 @@
         </li>
       </ul>
     </div>
+    <div v-else>
+      <img class="spc" src="../images/uc.png" alt />
+    </div>
   </div>
 </template>
 
@@ -23,7 +26,7 @@
 export const data = {
   layout: "default",
   injectAllPosts: true,
-  title: ""
+  title: "Blog"
 };
 
 export default {
@@ -66,11 +69,17 @@ li a {
 
   justify-content: center;
   align-items: center;
-  background-color: greenyellow;
+  background-color: #c2ff9f;
   color: black;
   width: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+}
+
+img {
+  width: 400px;
+  display: block;
+  margin: 10px auto;
 }
 
 a:hover .read {
@@ -91,5 +100,31 @@ li a p {
 
 .date {
   color: #aaa;
+}
+
+@media screen and (max-width: 750px) {
+  li a {
+    flex-direction: column-reverse;
+  }
+
+  .read {
+    width: 100%;
+    padding: 5px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  a:hover .read {
+    width: 100%;
+  }
+
+  img {
+    width: 80%;
+  }
+
+  a:active .read,
+  a:hover .read {
+    background-color: #5e9905;
+    color: white;
+  }
 }
 </style>

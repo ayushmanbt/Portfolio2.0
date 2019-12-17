@@ -63,7 +63,7 @@ import Contact from "../components/contact";
 
 export const data = {
   layout: "default",
-  title: ""
+  title: "Portfolio"
 };
 
 export default {

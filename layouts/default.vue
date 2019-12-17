@@ -1,9 +1,15 @@
 <template>
   <div class="container">
+    <div class="topbar">
+      <saber-link to="/" v-if="route == '/blog'">Portfolio</saber-link>
+      <saber-link to="/blog" v-else>Blogs</saber-link>
+    </div>
     <div class="dark-mode-button" v-on:click="toggleDarkMode()">
       <techIcon name="Toggle Dark Mode" :icon="dark_mode_icon" />
     </div>
-
+    <div class="open-button" v-on:click="open()">
+      <span class="mdi mdi-arrow-right-box"></span>
+    </div>
     <div id="left-bar">
       <leftSidebar />
       <div class="cross-button" v-on:click="close()">
@@ -12,9 +18,6 @@
     </div>
 
     <div class="main-content-container">
-      <div class="open-button" v-on:click="open()">
-        <span class="mdi mdi-arrow-right-box"></span>
-      </div>
       <div class="main-content">
         <slot name="default" />
       </div>
@@ -43,7 +46,8 @@ export default {
     return {
       dark_mode_icon: "mdi-moon-waning-crescent",
       dark_mode_light_icon: "mdi-moon-waning-crescent",
-      dark_mode_dark_icon: "mdi-weather-sunny"
+      dark_mode_dark_icon: "mdi-weather-sunny",
+      route: this.$route.fullPath
     };
   },
   methods: {
@@ -88,6 +92,7 @@ export default {
     }
   },
   mounted() {
+    // console.log(this.$route.fullPath);
     let nav = document.getElementById("left-bar");
     window.addEventListener("resize", this.onResize);
     if (window.innerWidth <= 750)
@@ -174,6 +179,16 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+.topbar {
+  height: 40px;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #c2ff9f;
+  display: none;
+}
+
 .main-content {
   width: 80%;
   margin: 30px auto;
@@ -236,6 +251,7 @@ p {
 
 .open-button {
   position: fixed;
+  z-index: 2;
   top: -10px;
   left: -10px;
   display: none;
@@ -310,6 +326,19 @@ p {
 @media only screen and (max-width: 750px) {
   .main-content {
     width: 90%;
+    margin-top: 50px;
+  }
+
+  .topbar {
+    padding-right: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .topbar a {
+    color: black;
+    font-size: 1.2rem;
   }
 
   .mdi {
@@ -343,7 +372,9 @@ p {
   html {
     font-size: 85%;
   }
-
+  .topbar {
+    height: 32px;
+  }
   .main-content {
     width: 90%;
   }
