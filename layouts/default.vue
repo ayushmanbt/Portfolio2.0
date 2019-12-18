@@ -125,7 +125,7 @@ export default {
         {
           rel: "stylesheet",
           href:
-            "https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates&display=swap"
+            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap"
         }
       ]
     };
@@ -139,6 +139,10 @@ export default {
 html {
   filter: invert(100%) hue-rotate(-180deg);
 } */
+
+body {
+  overflow: hidden;
+}
 
 * {
   box-sizing: border-box;
@@ -168,15 +172,6 @@ html {
   top: 10px;
   left: 10px;
   z-index: 100;
-}
-
-::-webkit-scrollbar {
-  display: none;
-  width: 0px !important;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
 }
 
 * {
@@ -243,12 +238,13 @@ p {
 }
 
 #left-bar {
+  position: relative;
   height: 100vh;
   min-width: 400px;
   top: 0;
   transform-origin: left;
   transition: all 0.3s ease-in-out;
-  overflow-y: auto;
+  overflow-y: none;
   z-index: 2;
 }
 
@@ -349,6 +345,7 @@ p {
   .topbar a {
     color: black;
     font-size: 1.2rem;
+    margin-left: auto;
   }
 
   .mdi {

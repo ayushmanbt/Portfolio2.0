@@ -105,6 +105,12 @@ form input[type="password"]:focus {
   cursor: pointer;
 }
 
+@media screen and (max-width: 980px) {
+  form {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 550px) {
   form {
     width: 90%;
