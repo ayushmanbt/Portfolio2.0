@@ -39,8 +39,6 @@ import downloadResume from "../components/downloadResume.vue";
 import techIcon from "../components/techIcon";
 
 import "@mdi/font/css/materialdesignicons.css";
-import "simplebar";
-import "simplebar/dist/simplebar.css";
 
 export default {
   props: ["page"],
@@ -126,7 +124,8 @@ export default {
         {
           rel: "stylesheet",
           href:
-            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap"
+            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap",
+          defer: true
         }
       ]
     };
