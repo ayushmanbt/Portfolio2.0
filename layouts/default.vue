@@ -23,7 +23,8 @@
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
-        >🔙 Back To Blog List</saber-link>
+          >🔙 Back To Blog List</saber-link
+        >
 
         <slot name="default" style="margin-top: 10px;" />
       </div>
@@ -38,8 +39,6 @@ import downloadResume from "../components/downloadResume.vue";
 import techIcon from "../components/techIcon";
 
 import "@mdi/font/css/materialdesignicons.css";
-import "simplebar";
-import "simplebar/dist/simplebar.css";
 
 export default {
   props: ["page"],
@@ -125,7 +124,8 @@ export default {
         {
           rel: "stylesheet",
           href:
-            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap"
+            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap",
+          defer: true
         }
       ]
     };
@@ -134,7 +134,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap");
 /* 
 html {
   filter: invert(100%) hue-rotate(-180deg);
