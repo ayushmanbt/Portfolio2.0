@@ -4,9 +4,9 @@
       <img src="../images/me.jpeg" alt />
     </div>
     <div class="about me">
-      <h1 class="heading">ABOUT ME</h1>
+      <h1 class="heading">ABOUT ME 🧐</h1>
       <p>
-        Hello, I'm Ayushman, a fullstack web developer. My catchline is
+        Hello, I'm Ayushman, a Full-Stack web developer. My catch line is
         <i>"Webbing my life with HTML CSS JS and Python"</i>
       </p>
       <p>
@@ -16,12 +16,14 @@
         and
         <span>
           <saber-link to="https://vuejs.org">Vue.js</saber-link>
-        </span> (BTW this site is made wih
+        </span> (BTW this site is made with
         <span>
           <saber-link to="https://saber.land">Saber.js</saber-link>
         </span> a vue.js framework) are my favourite frameworks.
       </p>
-      <p class="top-bar">Discover and contact me using these links</p>
+      <p>Turning ideas into reality and having it floating around the internet is difficult, but not impossible. I'm one of them who can help you to make this happen. I can make the applications appealing based on your ideas on how should it look and bring my spin to the table.</p>
+      <p>Worried about how your application works with users. There is nothing to worry about. Before having a dedicated backend developer I can create REST APIs which will later help you to have your application not only on the web but also on mobile.</p>
+      <p class="top-bar">Find me HERE 🔍</p>
       <div class="top-bar">
         <socialLinks class="socialLinks" />
 
@@ -32,7 +34,7 @@
       </div>
     </div>
     <br />
-    <h1 class="heading">SKILLS</h1>
+    <h1 class="heading">SKILLS 💪</h1>
     <div class="skill-part">
       <skillBlock heading="WEB DEV ESSENTIALS" :skills="JSON.stringify(skl.slice(0,3))" />
       <skillBlock heading="FRONTEND FRAMEWORKS" :skills="JSON.stringify(skl.slice(3,6))" />
@@ -40,7 +42,7 @@
       <skillBlock heading="OTHERS" :skills="JSON.stringify(skl.slice(8,10))" />
     </div>
     <br />
-    <h1 class="heading">HOBBIES</h1>
+    <h1 class="heading">HOBBIES 🤔</h1>
     <skills name="UI/UX Development" mdi="mdi-cellphone" color="#000000" />
 
     <br />

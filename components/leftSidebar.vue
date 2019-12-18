@@ -12,11 +12,11 @@
       <div>
         <ul>
           <li>
-            <saber-link to="/" v-on:click="close()" active-class="active" exact>PORTFOLIO</saber-link>
+            <saber-link to="/" v-on:click="close()" active-class="active" exact>PORTFOLIO 🧾</saber-link>
           </li>
 
           <li>
-            <saber-link to="/blog" v-on:click="close()" active-class="active" exact>BLOG</saber-link>
+            <saber-link to="/blog" v-on:click="close()" active-class="active" exact>BLOG 💻</saber-link>
           </li>
         </ul>
       </div>

@@ -19,7 +19,13 @@
 
     <div class="main-content-container">
       <div class="main-content">
-        <slot name="default" />
+        <saber-link
+          to="/blog"
+          v-if="route.indexOf('/posts') != -1"
+          class="back-to-blog"
+        >🔙 Back To Blog List</saber-link>
+
+        <slot name="default" style="margin-top: 10px;" />
       </div>
     </div>
   </div>
@@ -200,6 +206,10 @@ html {
   height: 100vh;
   overflow-y: auto;
   background-color: #ffffff;
+}
+
+.back-to-blog {
+  margin-bottom: 20px !important;
 }
 
 a {
