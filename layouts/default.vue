@@ -23,7 +23,8 @@
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
-        >🔙 Back To Blog List</saber-link>
+          >🔙 Back To Blog List</saber-link
+        >
 
         <slot name="default" style="margin-top: 10px;" />
       </div>
@@ -134,7 +135,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap");
 /* 
 html {
   filter: invert(100%) hue-rotate(-180deg);
