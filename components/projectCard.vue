@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="top-img">
-      <img src="../images/computer.jpg" />
+      <img src="../images/computer.jpg" loading="lazy" :alt="data.title" />
 
       <div class="techs-container">
         <techIcon v-for="tech in data.technologies" :key="tech" :name="tech" :icon="rdi(tech)" />
