@@ -1,5 +1,5 @@
 siteConfig:
-  title: Portfolio - Ayushman Bilas Thakur
+  title: Ayushman Bilas Thakur
 
 permalinks:
   post: /posts/:slug

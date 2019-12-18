@@ -1,20 +1,20 @@
 <template>
   <div>
-    <h1 class="heading">PROJECTS</h1>
+    <h1 class="heading">PROJECTS 👨‍🏭</h1>
     <div class="section">
-      <h2 class="heading">INTERNSHIPS</h2>
+      <h2 class="heading">INTERNSHIPS 🧩</h2>
       <div class="cards-container">
         <projectCard v-for="itsp in internships" :key="itsp.title" :data="itsp" />
       </div>
     </div>
     <div class="section">
-      <h2 class="heading">PERSONAL PROJECTS</h2>
+      <h2 class="heading">PERSONAL PROJECTS 🧩</h2>
       <div class="cards-container">
         <projectCard v-for="itsp in personalProjects" :key="itsp.title" :data="itsp" />
       </div>
     </div>
     <div class="section">
-      <h2 class="heading">OTHER PROECTS</h2>
+      <h2 class="heading">OTHER PROECTS 🧩</h2>
       <div class="cards-container">
         <projectCard v-for="itsp in honorableMention" :key="itsp.title" :data="itsp" />
       </div>

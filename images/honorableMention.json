@@ -1,18 +1,15 @@
-[
-  {
-    "title": "Timestamp API: Microservice",
-    "company_name": "Express based api microservice",
-    "technologies": ["Express", "JavaScript"],
-    "description": "This is a simple API which will convert a passed date or timestamp to UNIX and UTC timings. You can either pass timestamp or date in yyyy-mm-dd format. If you don't pass anything you will get current servertime in response",
-    "links": [
-      {
-        "type": "github",
-        "link": "https://github.com/AyushmanBilasThakur/Freecodecamp-Timpstamp-Microservice"
-      },
-      {
-        "type": "normal",
-        "link": "https://timestamp-microservice-freecodecam.glitch.me/"
-      }
-    ]
-  }
-]
+[{
+  "title": "Timestamp API: Micro-Service",
+  "company_name": "Express based api micro-service",
+  "technologies": ["Express", "JavaScript"],
+  "description": "This is a simple API which will convert a passed date or timestamp to UNIX and UTC timings. You can either pass timestamp or date in yyyy-mm-dd format. If you don't pass anything you will get current server-time in response",
+  "links": [{
+      "type": "github",
+      "link": "https://github.com/AyushmanBilasThakur/Freecodecamp-Timpstamp-Microservice"
+    },
+    {
+      "type": "normal",
+      "link": "https://timestamp-microservice-freecodecam.glitch.me/"
+    }
+  ]
+}]
