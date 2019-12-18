@@ -124,7 +124,7 @@ export default {
         {
           rel: "stylesheet",
           href:
-            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap",
+            "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400&display=swap",
           defer: true
         }
       ]
