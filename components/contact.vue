@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="heading">Contact Me</h1>
+    <h1 class="heading">Contact Me 📞</h1>
     <form action="https://formspree.io/xbjlwobn" method="POST">
       <label>
         Name:
