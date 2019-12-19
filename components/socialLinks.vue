@@ -20,7 +20,11 @@
 
 <style scoped>
 .dark-mode .mdi:hover {
-  color: #c25700;
+  color: #ee7410;
+}
+
+.dark-mode .mdi {
+  color: silver;
 }
 
 .social-links {

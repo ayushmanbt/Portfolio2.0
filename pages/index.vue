@@ -27,7 +27,6 @@
       <div class="top-bar">
         <socialLinks class="socialLinks" />
 
-        <saber-link to="/projects" class="buttoned-link yellow-bg">My Projects</saber-link>
         <saber-link to="/blog" class="buttoned-link outlined">Blog</saber-link>
 
         <downloadResume />

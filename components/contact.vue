@@ -36,7 +36,25 @@ export default {
 <style scoped>
 /* h1 {
   text-align: center;
+
+  
 } */
+
+.dark-mode form {
+  background: #000;
+}
+
+.dark-mode label {
+  color: white;
+}
+
+.dark-mode form input,
+.dark-mode form textarea {
+  background: #111;
+  color: white;
+  border: 1px solid orangered;
+}
+
 form {
   margin: 20px 10px;
   width: 500px;

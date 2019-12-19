@@ -56,10 +56,11 @@ export default {
 
 .dark-mode .card {
   border: 4px solid #e68e6b;
-  background: #ccc;
+  background: #232323;
+  color: white;
 }
 
-.dark-mode .card .top-img {
+/* .dark-mode .card .top-img {
   background: #fff;
   color: #000;
 }
@@ -69,7 +70,7 @@ export default {
 
 .dark-mode .card .top-details h2 {
   color: #004100;
-}
+} */
 
 .top-img {
   background: #000000;
@@ -125,6 +126,10 @@ export default {
   align-items: center;
   grid-gap: 10px;
   margin-bottom: 20px;
+}
+
+.links > * {
+  margin: 0 5px;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 750px) {

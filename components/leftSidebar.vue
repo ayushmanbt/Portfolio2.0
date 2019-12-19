@@ -12,7 +12,7 @@
       <div>
         <ul>
           <li>
-            <saber-link to="/" v-on:click="close()" active-class="active" exact>PORTFOLIO 🧾</saber-link>
+            <saber-link to="/" v-on:click="close()" active-class="active" exact>PORTFOLIO 📂</saber-link>
           </li>
 
           <li>
@@ -44,7 +44,8 @@ export default {
 
 <style scoped>
 .dark-mode nav {
-  background: #d9e0d7;
+  background: #111;
+  color: white;
 }
 
 .dark-mode .active {

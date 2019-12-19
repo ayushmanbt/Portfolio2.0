@@ -9,6 +9,7 @@
 
 .dark-mode .download-resume:hover {
   background: #e96900;
+  color: #142000;
 }
 
 .download-resume {

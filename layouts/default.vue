@@ -23,8 +23,7 @@
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
-          >🔙 Back To Blog List</saber-link
-        >
+        >🔙 Back To Blog List</saber-link>
 
         <slot name="default" style="margin-top: 10px;" />
       </div>
@@ -146,24 +145,43 @@ body {
 * {
   box-sizing: border-box;
 }
-.dark-mode {
-  filter: invert(100%) hue-rotate(-180deg);
+
+.dark-mode .mdi-arrow-right-box {
+  color: greenyellow;
 }
 
-.dark-mode img {
-  filter: invert(100%) hue-rotate(-180deg);
+.dark-mode .mdi-arrow-right-box:hover {
+  color: #a1d159;
+}
+
+.dark-mode .main-content-container {
+  background-color: #000;
+  color: white;
 }
 
 .dark-mode .heading {
-  color: #c25700;
-}
-
-.dark-mode a:hover {
-  color: #c25700;
+  color: #f0710a;
 }
 
 .dark-mode .dark-mode-button:hover {
-  color: #c25700;
+  color: #d1640a;
+}
+
+.dark-mode a {
+  color: #f06e32;
+}
+
+.dark-mode a:hover {
+  color: #ff8c2e;
+}
+
+.dark-mode .dark-mode-button {
+  color: white;
+}
+
+.dark-mode .mdi-unity,
+.dark-mode .mdi-cellphone {
+  color: white !important;
 }
 
 .dark-mode-button {
@@ -171,6 +189,26 @@ body {
   top: 10px;
   left: 10px;
   z-index: 100;
+}
+
+.dark-mode .topbar {
+  background: #383838;
+}
+
+.dark-mode .topbar a {
+  color: white;
+}
+
+.dark-mode .topbar a:hover,
+.dark-mode .topbar a:active,
+.dark-mode .topbar a:focus {
+  color: coral;
+}
+
+.dark-mode .outlined:hover {
+  background-color: #e96900;
+  color: black;
+  outline: none;
 }
 
 * {
@@ -187,6 +225,12 @@ body {
   width: 100%;
   background-color: #c2ff9f;
   display: none;
+}
+
+.topbar a:hover,
+.topbar a:active,
+.topbar a:focus {
+  color: darkcyan;
 }
 
 .main-content {
@@ -265,6 +309,7 @@ p {
 .mdi-arrow-right-box {
   color: green;
   font-size: 3rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .mdi-arrow-right-box:hover {
@@ -295,8 +340,9 @@ p {
 }
 
 .outlined {
-  border: 2px solid #a91b4b;
+  border: 2px solid #a94f1b;
   color: #a91b4b;
+  transition: all 0.3s ease-in-out;
 }
 
 .outlined:hover {
@@ -362,7 +408,7 @@ p {
   .dark-mode-button {
     position: absolute;
     top: 2px;
-    left: 30px;
+    left: 32px;
     z-index: 2;
   }
   #left-bar {
