@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "HTML5",
     "mdi": "mdi-language-html5",
     "color": "#F23E0F"
@@ -20,15 +19,16 @@
     "color": "#00BBB0"
   },
   {
-    "name": "Angular",
-    "mdi": "mdi-angular",
-    "color": "#C70000"
-  },
-  {
     "name": "Vue",
     "mdi": "mdi-vuejs",
     "color": "#5E8960"
   },
+  {
+    "name": "Angular",
+    "mdi": "mdi-angular",
+    "color": "#C70000"
+  },
+
   {
     "name": "Node.JS + Express",
     "mdi": "mdi-nodejs",
@@ -45,7 +45,7 @@
     "color": "#EE1E1E"
   },
   {
-    "name": "Game Development with Unity and C#",
+    "name": "Unity + C# Game Development",
     "mdi": "mdi-unity",
     "color": "#000000"
   }

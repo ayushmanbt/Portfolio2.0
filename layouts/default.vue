@@ -18,14 +18,23 @@
     </div>
 
     <div class="main-content-container">
-      <div class="main-content">
+      <div
+        class="main-content"
+        :class="route.indexOf('/posts') != -1 || route.indexOf('/blog') != -1 ? 'width-restricted' : ''"
+      >
         <saber-link
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
         >🔙 Back To Blog List</saber-link>
 
+        <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
         <slot name="default" style="margin-top: 10px;" />
+        <div style="height: 10px;" v-if="route.indexOf('/posts') != -1"></div>
+        <shareButtons v-if="route.indexOf('/posts') != -1" />
+        <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
+        <h3 v-if="route.indexOf('/posts') != -1">Comments:</h3>
+        <div id="disqus_thread" v-if="route.indexOf('/posts') != -1"></div>
       </div>
     </div>
   </div>
@@ -36,6 +45,7 @@ import leftSidebar from "../components/leftSidebar.vue";
 import socialLinks from "../components/socialLinks.vue";
 import downloadResume from "../components/downloadResume.vue";
 import techIcon from "../components/techIcon";
+import shareButtons from "../components/shareButtons";
 
 import "@mdi/font/css/materialdesignicons.css";
 
@@ -44,7 +54,8 @@ export default {
   components: {
     leftSidebar,
     socialLinks,
-    techIcon
+    techIcon,
+    shareButtons
   },
   data() {
     return {
@@ -103,6 +114,21 @@ export default {
       window.setTimeout(() => {
         this.close();
       }, 200);
+
+    if (this.route.indexOf("/posts") != -1) {
+      var disqus_config = function() {
+        this.page.url = "https://ayushmanbthakur.netlify.com"; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = this.route.rsplit("/", 1)[-1]; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://ayushmanbthakur-com.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    }
   },
   beforeDestroy() {
     // Unregister the event listener before destroying this Vue instance
@@ -110,6 +136,9 @@ export default {
   },
 
   head() {
+    const pageDesc =
+      this.page.desc ||
+      "This is the portfolio of Ayushman Bilas Thakur, a FullStack web developer and a part time blogger";
     const pageTitle = this.page && this.page.title;
     return {
       title: pageTitle
@@ -125,6 +154,26 @@ export default {
           href:
             "https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,800|Montserrat:400,800&display=swap",
           defer: true
+        }
+      ],
+      meta: [
+        {
+          name: "description",
+          content: pageDesc
+        },
+        {
+          property: "og:title",
+          content: pageTitle
+            ? `${pageTitle} - ${this.$siteConfig.title}`
+            : this.$siteConfig.title
+        },
+        {
+          property: "og:type",
+          content: "blog"
+        },
+        {
+          property: "og:description",
+          content: pageDesc
         }
       ]
     };
@@ -358,6 +407,16 @@ p {
 .yellow-bg:hover {
   background: #776808;
   color: white;
+}
+
+.thumbnail {
+  width: 100%;
+  /* max-width: 540px; */
+  margin: 10px auto;
+}
+
+.width-restricted {
+  max-width: 650px;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 750px) {

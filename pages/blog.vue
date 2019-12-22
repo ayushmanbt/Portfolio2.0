@@ -6,11 +6,16 @@
       <ul>
         <li v-for="post in page.posts" :key="post.permalink">
           <a :href="post.permalink">
-            <div class="read">Read 📖</div>
+            <div class="read">Read📖</div>
             <div class="content">
-              <h2>{{ post.title }}</h2>
-              <p>{{ post.desc || "this post has no description!" }}</p>
-              <p class="date">{{ formatDate(post.date) }}</p>
+              <div v-if="post.main_img" class="thumbnail_container">
+                <img :src="post.main_img" alt class="thumbnail_on_card" />
+              </div>
+              <div class="blob">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.desc || "this post has no description!" }}</p>
+                <p class="date">{{ formatDate(post.date) }}</p>
+              </div>
             </div>
           </a>
         </li>
@@ -40,7 +45,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 h1 {
   margin-bottom: 10px;
@@ -52,6 +56,32 @@ ul {
 
 ul li {
   list-style: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.dark-mode li {
+  border: 2px solid #ccc;
+}
+
+.dark-mode .read {
+  background-color: #f0710a;
+}
+
+.dark-mode li a p {
+  color: #fff;
+}
+
+.dark-mode li a .date {
+  color: #bbb;
+}
+
+.dark-mode li a h2 {
+  color: #f0710a;
+}
+
+.blob {
+  margin: 10px 20px;
 }
 
 li {
@@ -61,33 +91,33 @@ li {
 
 li a {
   display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .read {
+  position: absolute;
   display: flex;
-  padding: 0px 0px;
+  padding: 10px 20px;
 
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #c2ff9f;
   color: black;
-  width: 0;
+  width: fit-content;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 
 img {
-  width: 400px;
+  width: 100%;
   display: block;
-  margin: 10px auto;
 }
 
-a:hover .read {
-  width: 150px;
-}
-
-.content {
-  margin: 10px 20px;
+a:hover > .read {
+  background-color: #5e9905;
+  color: white;
 }
 
 li a h2 {
@@ -102,15 +132,27 @@ li a p {
   color: #aaa;
 }
 
+.thumbnail_container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.thumbnail_on_card {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 750px) {
   li a {
     flex-direction: column-reverse;
   }
 
   .read {
+    position: relative;
     width: 100%;
     padding: 5px;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
   }
 
   a:hover .read {
