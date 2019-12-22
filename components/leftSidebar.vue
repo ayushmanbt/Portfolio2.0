@@ -52,6 +52,10 @@ export default {
   background: #c25700;
 }
 
+.dark-mode a {
+  color: white;
+}
+
 .dark-mode a:hover {
   color: #c25700;
 }
