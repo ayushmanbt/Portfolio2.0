@@ -108,7 +108,11 @@ export default {
   },
   mounted() {
     // console.log(this.$route.fullPath);
+    if (!document.body.classList.contains("dark-mode"))
+      document.body.classList.add("dark-mode");
+
     let nav = document.getElementById("left-bar");
+
     window.addEventListener("resize", this.onResize);
     if (window.innerWidth <= 750)
       window.setTimeout(() => {
@@ -140,6 +144,7 @@ export default {
       this.page.desc ||
       "This is the portfolio of Ayushman Bilas Thakur, a FullStack web developer and a part time blogger";
     const pageTitle = this.page && this.page.title;
+    const image = thgis.page.main_img || "/me.jpeg";
     return {
       title: pageTitle
         ? `${pageTitle} - ${this.$siteConfig.title}`
@@ -174,6 +179,10 @@ export default {
         {
           property: "og:description",
           content: pageDesc
+        },
+        {
+          property: "og:image",
+          content: image
         }
       ]
     };
@@ -411,6 +420,7 @@ p {
 
 .thumbnail {
   width: 100%;
+  height: auto;
   /* max-width: 540px; */
   margin: 10px auto;
 }
