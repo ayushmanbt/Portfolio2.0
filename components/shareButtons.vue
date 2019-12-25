@@ -2,9 +2,9 @@
   <!-- AddToAny BEGIN -->
   <div>
     <div v-if="navigator.share">
-      <a v-on:click="shareAPI">
+      <button v-on:click="shareAPI">
         <span class="mdi mdi-share"></span>
-      </a>
+      </button>
     </div>
     <div v-else>
       <h5>Share This Post:</h5>
@@ -70,5 +70,10 @@ export default {
 <style scoped>
 .mdi {
   font-size: 2rem;
+}
+
+button {
+  background: none;
+  border: none;
 }
 </style>
