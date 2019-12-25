@@ -2,7 +2,7 @@
   <!-- AddToAny BEGIN -->
   <div>
     <div v-if="navigator.share">
-      <button :click="shareAPI()">Share</button>
+      <button v-on:click="shareAPI">Share</button>
     </div>
     <div v-else>
       <h5>Share This Post:</h5>
@@ -52,9 +52,9 @@ export default {
     shareAPI() {
       navigator
         .share({
-          title: this.page.title,
+          title: this.page.title || "Hello world",
           url: `${decodeURIComponent(this.location)}`,
-          text: "This is text for share"
+          text: this.page.desc || "the decriptions were not provided!"
         })
         .then(() => {
           console.log("Thanks for sharing!");
@@ -69,14 +69,4 @@ export default {
 .mdi {
   font-size: 2rem;
 }
-/* 
-button {
-  background: none;
-  border: none;
-  color: black;
-}
-
-.dark-mode button {
-  color: #f0710a;
-} */
 </style>
