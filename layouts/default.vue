@@ -31,7 +31,7 @@
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
         <slot name="default" style="margin-top: 10px;" />
         <div style="height: 10px;" v-if="route.indexOf('/posts') != -1"></div>
-        <shareButtons v-if="route.indexOf('/posts') != -1" />
+        <shareButtons :page="page" v-if="route.indexOf('/posts') != -1" />
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
         <h3 v-if="route.indexOf('/posts') != -1">Comments:</h3>
         <div style="height: 5px;" v-if="route.indexOf('/posts') != -1"></div>

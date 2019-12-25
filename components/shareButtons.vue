@@ -2,7 +2,10 @@
   <!-- AddToAny BEGIN -->
   <div>
     <div v-if="navigator.share">
-      <button v-on:click="shareAPI()">Share</button>
+      <button v-on:click="shareAPI()">
+        Share
+        <span class="mdi mdi-share"></span>
+      </button>
     </div>
     <div v-else>
       <h5>Share This Post:</h5>
@@ -38,7 +41,6 @@ export default {
     this.shareText = encodeURIComponent(
       "Check this awesome post by Ayushman about " + document.title + " at "
     );
-    console.log(this.shareText);
   },
   methods: {
     convertedURIFB() {
@@ -55,7 +57,8 @@ export default {
       navigator
         .share({
           title: this.title,
-          url: `${decodeURIComponent(this.location)}`
+          url: `${decodeURIComponent(this.location)}`,
+          text: `Check out this awesome post by Ayushman on - ${this.page.desc}`
         })
         .then(() => {
           console.log("Thanks for sharing!");
@@ -69,5 +72,15 @@ export default {
 <style scoped>
 .mdi {
   font-size: 2rem;
+}
+.button {
+  background: none;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+}
+
+.dark-mode .button {
+  color: #f0710a;
 }
 </style>
