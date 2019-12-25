@@ -56,8 +56,7 @@ export default {
       navigator
         .share({
           title: this.page.title,
-          url: `${decodeURIComponent(this.location)}`,
-          text: `Have a look at this awesome post by Ayushman - ${this.page.desc}`
+          url: `${decodeURIComponent(this.location)}`
         })
         .then(() => {
           alert("Thanks for sharing!");
