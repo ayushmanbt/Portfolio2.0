@@ -1,16 +1,21 @@
 <template>
   <!-- AddToAny BEGIN -->
   <div>
-    <h5>Share This Post:</h5>
-    <a :href="convertedURIFB()">
-      <span class="mdi mdi-facebook"></span>
-    </a>
-    <a :href="convertedURIWapp()">
-      <span class="mdi mdi-whatsapp"></span>
-    </a>
-    <a :href="convertedURITwitter()">
-      <span class="mdi mdi-twitter"></span>
-    </a>
+    <div v-if="navigator.share">
+      <button v-on:click="shareAPI">Share</button>
+    </div>
+    <div v-else>
+      <h5>Share This Post:</h5>
+      <a :href="convertedURIFB()">
+        <span class="mdi mdi-facebook"></span>
+      </a>
+      <a :href="convertedURIWapp()">
+        <span class="mdi mdi-whatsapp"></span>
+      </a>
+      <a :href="convertedURITwitter()">
+        <span class="mdi mdi-twitter"></span>
+      </a>
+    </div>
   </div>
   <!-- AddToAny END -->
 </template>
@@ -21,10 +26,12 @@ export default {
   data() {
     return {
       location: "",
-      shareText: ""
+      shareText: "",
+      navigator: ""
     };
   },
   mounted() {
+    this.navigator = window.navigator;
     this.location = encodeURIComponent(window.location.href);
     this.shareText = encodeURIComponent(
       "Check this awesome post by Ayushman about " + document.title + " at "
@@ -41,6 +48,17 @@ export default {
     },
     convertedURITwitter() {
       return `https://twitter.com/share?url=${this.location}&amp;text=${this.shareText}`;
+    },
+    shareAPI() {
+      navigator
+        .share({
+          title: "WebShare API Demo",
+          url: `${decodeURIComponent(this.location)}`
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch(console.error);
     }
   }
 };
@@ -50,6 +68,4 @@ export default {
 .mdi {
   font-size: 2rem;
 }
-</style>>
-
 </style>
