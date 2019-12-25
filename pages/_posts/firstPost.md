@@ -85,7 +85,7 @@ Sometimes you will need to merge seperate reducers before creating a store
     ```
 
     - reducer2.js
-      - index.js [for exporting the **combineReducer()** product] example =>
+      - index.js [for exporting the **combineReducer()** product] example:
 
     ```js
     import { combineReduce } from "Redux";
@@ -99,7 +99,7 @@ Sometimes you will need to merge seperate reducers before creating a store
     ```
 
   - App.js (React App component)
-  - index.js (Main injecting component) =>
+  - index.js (Main injecting component):
 
     ```JS
         import React from 'react'

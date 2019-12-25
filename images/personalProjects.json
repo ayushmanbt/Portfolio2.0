@@ -20,11 +20,11 @@
     "description": "This very webpage is one of my best frontend creations. Built with saber.js (a vue.js framework) this website is static-built like gatsby and is super fast. And using the full potential of React, there are a lot of things here",
     "links": [{
         "type": "github",
-        "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
+        "link": "https://github.com/AyushmanBilasThakur/Portfolio2.0"
       },
       {
         "type": "normal",
-        "link": "https://www.ayushmanbilasthakur.tk"
+        "link": "https://www.ayushmanbthakur.com"
       }
     ]
   },
