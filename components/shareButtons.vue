@@ -27,10 +27,12 @@ export default {
     return {
       location: "",
       shareText: "",
-      navigator: ""
+      navigator: "",
+      title: ""
     };
   },
   mounted() {
+    this.title = document.title;
     this.navigator = window.navigator;
     this.location = encodeURIComponent(window.location.href);
     this.shareText = encodeURIComponent(
@@ -52,9 +54,8 @@ export default {
     shareAPI() {
       navigator
         .share({
-          title: this.page.title || "Hello world",
-          url: `${decodeURIComponent(this.location)}`,
-          text: this.page.desc || "the decriptions were not provided!"
+          title: this.title,
+          url: `${decodeURIComponent(this.location)}`
         })
         .then(() => {
           console.log("Thanks for sharing!");
