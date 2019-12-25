@@ -2,7 +2,7 @@
   <!-- AddToAny BEGIN -->
   <div>
     <div v-if="navigator.share">
-      <button v-on:click="shareAPI">
+      <button v-on:click="shareAPI()">
         Share
         <span class="mdi mdi-share"></span>
       </button>
@@ -56,7 +56,8 @@ export default {
       navigator
         .share({
           title: this.page.title,
-          url: `${decodeURIComponent(this.location)}`
+          url: `${decodeURIComponent(this.location)}`,
+          text: `Have a look at this awesome post by Ayushman - ${this.page.desc}`
         })
         .then(() => {
           alert("Thanks for sharing!");
