@@ -2,7 +2,7 @@
   <!-- AddToAny BEGIN -->
   <div>
     <div v-if="navigator.share">
-      <button v-on:click="shareAPI">Share</button>
+      <button v-on:click="shareAPI()">Share</button>
     </div>
     <div v-else>
       <h5>Share This Post:</h5>
