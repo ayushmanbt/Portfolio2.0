@@ -3,6 +3,7 @@
   <div>
     <div v-if="navigator.share">
       <button v-on:click="shareAPI">
+        Share
         <span class="mdi mdi-share"></span>
       </button>
     </div>
@@ -59,7 +60,7 @@ export default {
           text: `Check out this awesome post by Ayushman Bilas Thakur`
         })
         .then(() => {
-          console.log("Thanks for sharing!");
+          alert("Thanks for sharing!");
         })
         .catch(console.error);
     }
@@ -75,5 +76,10 @@ export default {
 button {
   background: none;
   border: none;
+  color: black;
+}
+
+.dark-mode button {
+  color: orangered;
 }
 </style>

@@ -34,6 +34,7 @@
         <shareButtons v-if="route.indexOf('/posts') != -1" />
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
         <h3 v-if="route.indexOf('/posts') != -1">Comments:</h3>
+        <div style="height: 5px;" v-if="route.indexOf('/posts') != -1"></div>
         <div id="disqus_thread" v-if="route.indexOf('/posts') != -1"></div>
       </div>
     </div>
