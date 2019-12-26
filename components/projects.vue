@@ -58,10 +58,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   grid-gap: 20px;
+  align-items: stretch;
 }
 
 .cards-container > * {
-  margin: 5px 15px;
+  margin: 10px 10px;
+  flex-grow: 1;
+  max-width: 500px;
 }
 
 .link-to-project {

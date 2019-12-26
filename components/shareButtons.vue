@@ -58,7 +58,7 @@ export default {
         .share({
           title: this.title,
           url: `${decodeURIComponent(this.location)}`,
-          text: `Check out this awesome post by Ayushman on - ${this.page.desc}`
+          text: `${this.page.desc}... Read more at `
         })
         .then(() => {
           console.log("Thanks for sharing!");
@@ -74,7 +74,7 @@ export default {
   font-size: 2rem;
 }
 .button {
-  background: none;
+  background: transparent;
   color: whitesmoke;
   border: none;
   outline: none;

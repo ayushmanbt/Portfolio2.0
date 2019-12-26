@@ -1,6 +1,6 @@
 ---
-title: Redux vs Context API (Incomplete)
-date: 2019-12-20
+title: Redux vs Context API
+date: 2019-12-26
 layout: default
 slug: redux-vs-context-api
 desc: Redux and Context API are the two main ways to have global state in React. Check out how to work with both of them and then decide which one is best for you
@@ -32,31 +32,33 @@ So in this post we are going to compare the working of both Redux and Context AP
 
 - **React**
 - **Redux**: for the functions like **createStore()**, **combineReducer()**
-- **React-Redux**: contains the methodes like **useDipatch**(used to dispatch an action) and **useSelector**(used to select things from global state) **Provider** is also a part of react-redux.
+- **React-Redux**: contains the methods like **useDispatch**(used to dispatch an action) and **useSelector**(used to select things from global state) **Provider** is also a part of react-redux.
 
 <br/>
 
 ### Components of redux
 
-**_reducer_**: these are actually functions with state and actions passed in .. they work with **action.type** in swich cases and return the updated state it optionally needs to accept **payload** to work properly..
-Sometimes you will need to merge seperate reducers before creating a store
+**_reducer_**: these are actually functions with state and actions passed in .. they work with **action.type** in switch cases and return the updated state it optionally needs to accept **payload** to work properly..
+Sometimes you will need to merge separate reducers before creating a store
 (generally in _reducer folder_ for each reducer)
 
 **_store_**: store is the hub of all data. It is also passed to the provider
-(generally created in _index.js_, but the combining of reduceers happen in a _index.js_ in reducer folder)
+(generally created in _index.js_, but the combining of reducers happen in a _index.js_ in reducer folder)
 
-**_provider_**: a react based component which takes store as an arguement
+**_provider_**: a react based component which takes store as an argument
 (generally created in _index.js_)
 
-**_actions_**: functions providing / returning payload and action type to the dispacher which will call the required reducer.
-(generally created in _seperate file called actions.js_)
+**_actions_**: functions providing / returning payload and action type to the dispatcher which will call the required reducer.
+(generally created in _separate file called actions.js_)
 
-## Folder Structure
+### Folder Structure
+
+Here is the folder structure I use for working with Redux. This is a simple app where a reducer is used to count the number of button taps. **Disclaimer**: The _reducer2.js_ is created just for showing how to combine two reducers, you may or may not use that. So without further adieu, let's look at the folder structure along with the relevant code.
 
 - src/
 
   - actions
-    - index.js [this file stores all the actions which we need to call using dipatcher] example =>
+    - index.js [this file stores all the actions which we need to call using dispatcher] example:
     ```JS
     export const action_a = (data) => {
         return {
@@ -68,16 +70,17 @@ Sometimes you will need to merge seperate reducers before creating a store
     ```
   - reducers
 
-    - reducer1.js example =>
+    - reducer1.js. example:
 
     ```JS
     const initialState = 0
-    export const reducer1 = (state = initialstate, action) => {
+    export const reducer1 = (state = initialState, action) => {
         switch(action){
             case 'ACTION_NAME':
-            return state + payload;
+                return state + payload;
             // always return the complete updated set,
-            // using spread operator will be helpful
+            // using spread operator will be helpful if you have
+            // an object in state
             default:
                 return state;
         }
@@ -85,43 +88,219 @@ Sometimes you will need to merge seperate reducers before creating a store
     ```
 
     - reducer2.js
-      - index.js [for exporting the **combineReducer()** product] example:
+    - index.js [for combining all the reducers] example:
 
     ```js
     import { combineReduce } from "Redux";
     import { reducer1 } from "./reducer1";
     import { reducer2 } from "./reducer2";
 
-    export default allReducer = combineReducer({
+    export default megaReducer = combineReducer({
       reducer1,
       reducer2
     });
     ```
 
-  - App.js (React App component)
-  - index.js (Main injecting component):
+  - App.js [React App component]
+  - index.js [Main injecting component of react. We will use this to inject our combined reducer to our app, using provider, found in the react-redux package. Here I have used Redux DevTools to debug it in the console. It is a chrome extension found [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)]:
 
     ```JS
-        import React from 'react'
-        import ReactDOM from 'react-dom';
-        import App from './App'
-        import { Provider } from 'react-redux'
-        import { createStore } from 'redux'
-        import allReducer from './reducers'
+            import React from 'react'
+            import ReactDOM from 'react-dom';
+            import App from './App'
+            import { Provider } from 'react-redux'
+            import { createStore } from 'redux'
+            import megaReducer from './reducers'
 
-        const store = createStore(allReducer,
-        //this is for devtools-redux
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&  window.__REDUX_DEVTOOLS_EXTENSION__()
-        );
+            const store = createStore(megaReducer,
+            //this is for devtools-redux, you may or may not use that
+            window.__REDUX_DEVTOOLS_EXTENSION__ &&  window.__REDUX_DEVTOOLS_EXTENSION__()
+            );
 
-        ReactDOM.render(
-        <Provider store = {store}>
-            <App />
-        </Provider>,
-        document.getElementById('root'));
+            ReactDOM.render(
+            <Provider store = {store}>
+                <App />
+            </Provider>,
+            document.getElementById('root'));
     ```
 
-To be continued in this post...
+    Now the only thing we need is the ability to access and update the state from the global state. Let's see the steps one by one:
+
+#### Accessing the state using useSelector:
+
+**useSelector()** is a method provided by _react-redux_ package to select a _reducer_ from the combined reducer and access its values. To show how does it work let's edit the **App.js**
+
+```JS
+    import React from 'react';
+    import {useSelector} from 'react-redux';
+
+    function App(){
+        const count = useSelector(state => state.reducer1)
+
+        return(
+            <div>
+                <h1>Number: {{count}}</h1>
+            </div>
+        );
+    }
+
+    export default App;
+```
+
+The useSelector function takes in a callback function which returns the required reducer from the combined reducer.
+
+#### Updating the state using useDispatch:
+
+In the previous example we used **useSelector()** to select a state from the from the combined reducer. Now we will see how to update the state, so we will need to modify the App.js again:
+
+```JS
+    import React from 'react';
+    import {useSelector, useDispatch} from 'react-redux';
+
+    function App(){
+
+        const dispatch_control = useDispatch();
+        const count = useSelector(state => state.reducer1)
+
+        return(
+            <div>
+                <h1>Number: {{count}}</h1>
+            </div>
+        );
+    }
+
+    export default App;
+```
+
+at first I imported the useDispatch function and initialized it as dispatch_control. Now dispatch_control will contain the function returned by the **useDispatch()** which will finally let us to dispatch an action. All that is now left is to import the action and use it using dispatch_control:
+
+```JS
+    import React from 'react';
+    import {useSelector, useDispatch} from 'react-redux';
+    import {action_a} from './actions';
+
+    function App(){
+
+        const dispatch_control = useDispatch();
+        const count = useSelector(state => state.reducer1)
+
+        return(
+            <div>
+                <h1>Number: {{count}}</h1>
+                <button onClick={() => dispatch_control(action_a(1))} >
+                +1
+                </button>
+            </div>
+        );
+    }
+    export default App;
+```
+
+So here we passed the action to be dispatched imported from ./actions to the onClick event listener of the button "+1" and passed in the payload of 1 as previously we used a payload with the action definition and the reducer action.
+
+So this was the basic overview of using redux with react. There are still a lot to discuss about redux, which I might do in another post.
+
+Now let's jump to context API.
+
+## Working with Context API
+
+**Context API** is the Built in way of react to handle global state management and it is easier than **Redux**
+
+### Important things
+
+**_provider_**: This is a react component with a state and it returns JSX
+
+**_context_**: it is created using a function called createContext()
+
+## Structure of Context.js
+
+```JS
+import React, {useState, createContext} from 'react'
+
+export const xyzContext = createContext();
+
+export const xyzProvider = (props) => {
+
+    const [number, setNumber] = useState(0);
+
+    return(
+        <xyzContext.Povider value = {[number, setNumber]}>{props.childern}</xyzContext.Povider>
+    )
+}
+```
+
+So in this code we created a new context named xyzContext. Then the state was created using React Hooks. So we are exporting two things, the context and the provider(the react component). The props.children is used to have components inside the Provider component
+
+Now just import the Provider and wrap the App with that component. Let's use the App.js:
+
+```JS
+    import React from 'react';
+    import { xyzProvider } from './Context'
+
+    function App(){
+
+        return(
+            <xyzProvider>
+                <div>
+                    <h1>Number: </h1>
+                </div>
+            </xyzProvider>
+        );
+    }
+    export default App;
+```
+
+Now that we have wrapped our app with the provider we can use the context and the **useContext()** hook provided by React. So let's render our number:
+
+```JS
+    import React from 'react';
+    import {useContext} from 'react';
+    import { xyzProvider, xyzContext } from './Context';
+
+    function App(){
+        const [number, setNumber] = useContext(xyzContext);
+        return(
+            <xyzProvider>
+                <div>
+                    <h1>Number: {{number}}</h1>
+                </div>
+            </xyzProvider>
+        );
+    }
+    export default App;
+```
+
+Wow! now you can see the number from the global state. Now, the only thing left is to update the number. With the **setNumber** imported it will be really easy:
+
+```JS
+    import React from 'react';
+    import {useContext} from 'react';
+    import { xyzProvider, xyzContext } from './Context';
+
+    function App(){
+        const [number, setNumber] = useContext(xyzContext);
+        const increaseNumber = () => {
+            setNumber(prevNumber => prevNumber + 1);
+        }
+        return(
+            <xyzProvider>
+                <div>
+                    <h1>Number: {{number}}</h1>
+                    <button onClick="increaseNumber()" >
+                        +1
+                    </button>
+                </div>
+            </xyzProvider>
+        );
+    }
+    export default App;
+```
+
+So here we used an onClick event listener to fire up the **increaseNumber** function. In the increaseNumber function we used the setNumber function which takes a function as an argument. In this argument function we pass the previous state and return the new state. In case, if your state is an object then use the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+## Conclusion
+
+According to me, the main advantage of context API over Redux is that instead of importing actions and using them we get to manipulate the state directly on the component we are currently on. Context API is also easy to set up and is as effective as Redux. Moreover, Context API is the in-built solution, so you don't need to worry about third parties implementing new changes. 
 
 <style scoped>
 h1,h2,h3,h4,h5,h6{

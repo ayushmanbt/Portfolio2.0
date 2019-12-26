@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .card {
   width: 356px;
-  height: fit-content;
+
   border: 4px solid #a8502d;
   border-radius: 20px;
 }
