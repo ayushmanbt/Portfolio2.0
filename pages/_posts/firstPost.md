@@ -104,23 +104,25 @@ Here is the folder structure I use for working with Redux. This is a simple app 
   - index.js [Main injecting component of React. We will use this to inject our combined reducer to our app, using provider, found in the React-Redux package. Here I have used Redux DevTools to debug it in the console. It is a chrome extension found [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)]:
 
     ```JS
-            import React from 'react'
-            import ReactDOM from 'react-dom';
-            import App from './App'
-            import { Provider } from 'react-redux'
-            import { createStore } from 'redux'
-            import megaReducer from './reducers'
+    import React from 'react'
+    import ReactDOM from 'react-dom';
+    import App from './App'
+    import { Provider } from 'react-redux'
+    import { createStore } from 'redux'
+    import megaReducer from './reducers'
 
-            const store = createStore(megaReducer,
-            //this is for devtools-redux, you may or may not use that
-            window.__REDUX_DEVTOOLS_EXTENSION__ &&  window.__REDUX_DEVTOOLS_EXTENSION__()
-            );
+    const store = createStore(megaReducer,
+    //this is for devtools-redux, you may or may not use that
+    window.__REDUX_DEVTOOLS_EXTENSION__
+    && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
 
-            ReactDOM.render(
-            <Provider store = {store}>
-                <App />
-            </Provider>,
-            document.getElementById('root'));
+    ReactDOM.render(
+        <Provider store = {store}>
+            <App />
+        </Provider>,
+        document.getElementById('root')
+    );
     ```
 
 Now the only thing we need is the ability to access and update the state from the global state. Let's see the steps one by one:
@@ -130,20 +132,20 @@ Now the only thing we need is the ability to access and update the state from th
 **useSelector()** is a method provided by _React-redux_ package to select a _reducer_ from the combined reducer and access its values. To show how does it work let's edit the **App.js**
 
 ```JS
-    import React from 'react';
-    import {useSelector} from 'React-redux';
+import React from 'react';
+import {useSelector} from 'React-redux';
 
-    function App(){
-        const count = useSelector(state => state.reducer1)
+function App(){
+    const count = useSelector(state => state.reducer1)
 
-        return(
-            <div>
-                <h1>Number: {{count}}</h1>
-            </div>
-        );
-    }
+    return(
+        <div>
+            <h1>Number: {{count}}</h1>
+        </div>
+    );
+}
 
-    export default App;
+export default App;
 ```
 
 The useSelector function takes in a callback function which returns the required reducer from the combined reducer.
@@ -153,46 +155,47 @@ The useSelector function takes in a callback function which returns the required
 Previously we used **useSelector()** to select a state from the combined reducer. Now we will see how to update the state, so we will need to modify the App.js again:
 
 ```JS
-    import React from 'react';
-    import {useSelector, useDispatch} from 'react-redux';
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 
-    function App(){
+function App(){
 
-        const dispatch_control = useDispatch();
-        const count = useSelector(state => state.reducer1)
+    const dispatch_control = useDispatch();
+    const count = useSelector(state => state.reducer1)
 
-        return(
-            <div>
-                <h1>Number: {{count}}</h1>
-            </div>
-        );
-    }
+    return(
+        <div>
+            <h1>Number: {{count}}</h1>
+        </div>
+    );
+}
 
-    export default App;
+export default App;
 ```
 
 at first, I imported the useDispatch function and initialized it as dispatch_control. Now dispatch_control will contain the function returned by the **useDispatch()** which will finally let us dispatch an action. All that is now left is to import the action and use it using dispatch_control:
 
 ```JS
-    import React from 'react';
-    import {useSelector, useDispatch} from 'react-redux';
-    import {action_a} from './actions';
 
-    function App(){
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {action_a} from './actions';
 
-        const dispatch_control = useDispatch();
-        const count = useSelector(state => state.reducer1)
+function App(){
 
-        return(
-            <div>
-                <h1>Number: {{count}}</h1>
-                <button onClick={() => dispatch_control(action_a(1))} >
+    const dispatch_control = useDispatch();
+    const count = useSelector(state => state.reducer1)
+
+    return(
+        <div>
+            <h1>Number: {{count}}</h1>
+            <button onClick={() => dispatch_control(action_a(1))} >
                 +1
-                </button>
-            </div>
-        );
-    }
-    export default App;
+            </button>
+        </div>
+    );
+}
+export default App;
 ```
 
 So here we passed the action to be dispatched imported from ./actions to the onClick event listener of the button "+1" and passed in the payload of 1 as previously we used a payload with the action definition and the reducer action.
@@ -223,7 +226,9 @@ export const xyzProvider = (props) => {
     const [number, setNumber] = useState(0);
 
     return(
-        <xyzContext.Povider value = {[number, setNumber]}>{props.childern}</xyzContext.Povider>
+        <xyzContext.Povider value = {[number, setNumber]}>
+            {props.childern}
+        </xyzContext.Povider>
     )
 }
 ```
@@ -233,66 +238,67 @@ So in this code, we created a new context named xyzContext. Then the state was c
 Now just import the Provider and wrap the App with that component. Let's use the App.js:
 
 ```JS
-    import React from 'react';
-    import { xyzProvider } from './Context'
+import React from 'react';
+import { xyzProvider } from './Context'
 
-    function App(){
-
-        return(
-            <xyzProvider>
-                <div>
-                    <h1>Number: </h1>
-                </div>
-            </xyzProvider>
+function App(){
+    return(
+        <xyzProvider>
+            <div>
+                <h1>Number: </h1>
+            </div>
+        </xyzProvider>
         );
     }
-    export default App;
+
+export default App;
 ```
 
 Now that we have wrapped our app with the provider we can use the context and the **useContext()** hook provided by React. So let's render our number:
 
 ```JS
-    import React from 'react';
-    import {useContext} from 'react';
-    import { xyzProvider, xyzContext } from './Context';
+import React from 'react';
+import {useContext} from 'react';
+import { xyzProvider, xyzContext } from './Context';
 
-    function App(){
-        const [number, setNumber] = useContext(xyzContext);
-        return(
-            <xyzProvider>
-                <div>
-                    <h1>Number: {{number}}</h1>
-                </div>
-            </xyzProvider>
-        );
-    }
-    export default App;
+function App(){
+    const [number, setNumber] = useContext(xyzContext);
+    return(
+        <xyzProvider>
+            <div>
+                <h1>Number: {{number}}</h1>
+            </div>
+        </xyzProvider>
+    );
+}
+export default App;
 ```
 
 Wow! now you can see the number from the global state. Now, the only thing left is to update the number. With the **setNumber** provided by **useContext** it will be really easy:
 
 ```JS
-    import React from 'react';
-    import {useContext} from 'react';
-    import { xyzProvider, xyzContext } from './Context';
+import React from 'react';
+import {useContext} from 'react';
+import { xyzProvider, xyzContext } from './Context';
 
-    function App(){
-        const [number, setNumber] = useContext(xyzContext);
-        const increaseNumber = () => {
-            setNumber(prevNumber => prevNumber + 1);
-        }
-        return(
-            <xyzProvider>
-                <div>
-                    <h1>Number: {{number}}</h1>
-                    <button onClick="increaseNumber()" >
-                        +1
-                    </button>
-                </div>
-            </xyzProvider>
-        );
+function App(){
+    const [number, setNumber] = useContext(xyzContext);
+    const increaseNumber = () => {
+        setNumber(prevNumber => prevNumber + 1);
     }
-    export default App;
+    return(
+        <xyzProvider>
+            <div>
+                <h1>Number: {{number}}</h1>
+                <button onClick="increaseNumber()" >
+                    +1
+                </button>
+            </div>
+        </xyzProvider>
+    );
+}
+
+export default App;
 ```
 
 So here we used an onClick event listener to fire up the **increaseNumber** function. In the **increaseNumber** function, we used the **setNumber** function which takes a function as an argument. In this function, we pass the previous state and return the new state. In case, if your state is an object then use the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

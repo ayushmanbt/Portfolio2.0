@@ -122,8 +122,8 @@ export default {
 
     if (this.route.indexOf("/posts") != -1) {
       var disqus_config = function() {
-        this.page.url = "https://ayushmanbthakur.netlify.com"; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = this.route.rsplit("/", 1)[-1]; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = "https://www.ayushmanbthakur.com"; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = this.route; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
       (function() {
         // DON'T EDIT BELOW THIS LINE
