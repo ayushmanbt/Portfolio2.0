@@ -159,7 +159,8 @@ export default {
       this.page.desc ||
       "This is the portfolio of Ayushman Bilas Thakur, a FullStack web developer and a part time blogger";
     const pageTitle = this.page && this.page.title;
-    const image = this.page.main_img || "/me.jpeg";
+    const image =
+      "https://www.ayushmanbthakur.com/" + (this.page.main_img || "me.jpeg");
     return {
       title: pageTitle
         ? `${pageTitle} - ${this.$siteConfig.title}`
