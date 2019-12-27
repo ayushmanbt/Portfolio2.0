@@ -20,13 +20,18 @@
     <div class="main-content-container">
       <div
         class="main-content"
-        :class="route.indexOf('/posts') != -1 || route.indexOf('/blog') != -1 ? 'width-restricted' : ''"
+        :class="
+          route.indexOf('/posts') != -1 || route.indexOf('/blog') != -1
+            ? 'width-restricted'
+            : ''
+        "
       >
         <saber-link
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
-        >🔙 Back To Blog List</saber-link>
+          >🔙 Back To Blog List</saber-link
+        >
 
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
         <slot name="default" style="margin-top: 10px;" />
@@ -193,6 +198,22 @@ export default {
         {
           property: "og:image",
           content: image
+        },
+        {
+          property: "twitter:creator",
+          content: "@AyushmanBThakur"
+        },
+        {
+          property: "twitter:image",
+          content: image
+        },
+        {
+          property: "twitter:site",
+          content: "@AyushmanBThakur"
+        },
+        {
+          property: "twitter:card",
+          content: "summary"
         }
       ]
     };
