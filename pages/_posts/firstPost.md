@@ -89,7 +89,7 @@ Here is the folder structure I use for working with Redux. This is a simple app 
     - reducer2.js
     - index.js [for combining all the reducers] example:
 
-    ```js
+    ```JS
     import { combineReduce } from "Redux";
     import { reducer1 } from "./reducer1";
     import { reducer2 } from "./reducer2";
@@ -103,7 +103,7 @@ Here is the folder structure I use for working with Redux. This is a simple app 
   - App.js [React App component]
   - index.js [Main injecting component of React. We will use this to inject our combined reducer to our app, using provider, found in the React-Redux package. Here I have used Redux DevTools to debug it in the console. It is a chrome extension found [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)]:
 
-    ```JS
+    ```JSX
     import React from 'react'
     import ReactDOM from 'react-dom';
     import App from './App'
@@ -131,7 +131,7 @@ Now the only thing we need is the ability to access and update the state from th
 
 **useSelector()** is a method provided by _React-redux_ package to select a _reducer_ from the combined reducer and access its values. To show how does it work let's edit the **App.js**
 
-```JS
+```JSX
 import React from 'react';
 import {useSelector} from 'React-redux';
 
@@ -154,7 +154,7 @@ The useSelector function takes in a callback function which returns the required
 
 Previously we used **useSelector()** to select a state from the combined reducer. Now we will see how to update the state, so we will need to modify the App.js again:
 
-```JS
+```JSX
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -175,7 +175,7 @@ export default App;
 
 at first, I imported the useDispatch function and initialized it as dispatch_control. Now dispatch_control will contain the function returned by the **useDispatch()** which will finally let us dispatch an action. All that is now left is to import the action and use it using dispatch_control:
 
-```JS
+```JSX
 
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
@@ -216,7 +216,7 @@ Now let's jump to context API.
 
 ## Structure of Context.js
 
-```JS
+```JSX
 import React, {useState, createContext} from 'react'
 
 export const xyzContext = createContext();
@@ -237,7 +237,7 @@ So in this code, we created a new context named xyzContext. Then the state was c
 
 Now just import the Provider and wrap the App with that component. Let's use the App.js:
 
-```JS
+```JSX
 import React from 'react';
 import { xyzProvider } from './Context'
 
@@ -256,7 +256,7 @@ export default App;
 
 Now that we have wrapped our app with the provider we can use the context and the **useContext()** hook provided by React. So let's render our number:
 
-```JS
+```JSX
 import React from 'react';
 import {useContext} from 'react';
 import { xyzProvider, xyzContext } from './Context';
@@ -276,7 +276,7 @@ export default App;
 
 Wow! now you can see the number from the global state. Now, the only thing left is to update the number. With the **setNumber** provided by **useContext** it will be really easy:
 
-```JS
+```JSX
 import React from 'react';
 import {useContext} from 'react';
 import { xyzProvider, xyzContext } from './Context';
@@ -312,6 +312,16 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Montserrat Alternates", sans-serif;
 }
 
+pre{
+    background: #011627 !important;
+}
+
+pre *{
+    background: transparent !important;
+    text-shadow: none;
+    color: #d6deeb;
+}
+
 .dark-mode p, .dark-mode li{
     color: #bbb;
 }
@@ -323,8 +333,6 @@ li{
     margin-left: 20px;
 }
 
-pre{
-    padding: 10px 20px;
-}
+
 
 </style>
