@@ -108,6 +108,15 @@ export default {
     }
   },
   mounted() {
+    //google analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-142130562-2");
+
     // console.log(this.$route.fullPath);
     if (!document.body.classList.contains("dark-mode"))
       document.body.classList.add("dark-mode");
