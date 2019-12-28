@@ -306,7 +306,7 @@ So here we used an onClick event listener to fire up the **increaseNumber** func
 
 ## Conclusion
 
-According to me, the main advantage of Context API over Redux is that instead of importing actions and using them we get to manipulate the state directly on the component we are currently on. Context API is also easy to set up and is as effective as Redux. Moreover, Context API is the in-built solution, so you don't need to worry about third parties implementing new changes.
+According to me, the main advantage of Context API over Redux is that instead of importing actions and using them we get to manipulate the state directly on the component we are currently on. Context API is also easy to set up and is as effective as Redux. Moreover, Context API is the in-built solution, so you don't need to worry about third parties implementing new changes. So I would choose Context API to work with rather than Redux. But keep one thing in mind - Redux is the industry standard.
 
 <style scoped>
 h1,h2,h3,h4,h5,h6{
