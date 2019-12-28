@@ -67,7 +67,7 @@ export default {
 nav {
   position: relative;
   padding: 0 40px;
-  background: #e7ffdf;
+  background: #d1d1d1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
