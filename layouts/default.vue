@@ -179,6 +179,10 @@ export default {
       ],
       meta: [
         {
+          name: "google-site-verification",
+          content: "kE8nEcx0W5-VKO-xPHS1RN5iZFv796r1KsoewnJll1g"
+        },
+        {
           name: "description",
           content: pageDesc
         },
