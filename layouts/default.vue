@@ -121,6 +121,16 @@ export default {
     gtag("js", new Date());
 
     gtag("config", "UA-142130562-2");
+    //subscribe
+    if (this.route.indexOf("/posts") != -1)
+      window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+        L.start({
+          baseUrl: "mc.us4.list-manage.com",
+          uuid: "a35919cebae144d9cf644ff4b",
+          lid: "af22b73e0a",
+          uniqueMethods: true
+        });
+      });
 
     // console.log(this.$route.fullPath);
     if (!document.body.classList.contains("dark-mode"))
