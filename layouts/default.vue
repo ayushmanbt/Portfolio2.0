@@ -161,6 +161,11 @@ export default {
     const pageTitle = this.page && this.page.title;
     const image =
       "https://www.ayushmanbthakur.com/" + (this.page.main_img || "me.jpeg");
+    let keywords =
+      "Ayushman, Ayushman Bilas Thakur, Web Development Blog, Blog, Web Developer";
+
+    keywords = this.page.tags ? this.page.tags + ", " + keywords : keywords;
+
     return {
       title: pageTitle
         ? `${pageTitle} - ${this.$siteConfig.title}`
@@ -181,6 +186,14 @@ export default {
         {
           name: "google-site-verification",
           content: "kE8nEcx0W5-VKO-xPHS1RN5iZFv796r1KsoewnJll1g"
+        },
+        {
+          name: "robots",
+          content: "all"
+        },
+        {
+          name: "keywords",
+          content: keywords
         },
         {
           name: "description",

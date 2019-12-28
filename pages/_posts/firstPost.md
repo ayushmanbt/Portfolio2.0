@@ -5,6 +5,7 @@ layout: default
 slug: redux-vs-context-api
 desc: Redux and Context API are the two main ways to have global state in React. Check out how to work with both of them and then decide which one is best for you
 main_img: /redux_vs_context_api/thumbnail.png
+tags: React, Redux, Context API, State Management
 ---
 
 # Redux vs Context API - My Thoughts
@@ -314,12 +315,14 @@ h1,h2,h3,h4,h5,h6{
 
 pre{
     background: #011627 !important;
+    z-index: 0;
 }
 
 pre *{
     background: transparent !important;
     text-shadow: none;
     color: #d6deeb;
+    
 }
 
 .dark-mode p, .dark-mode li{

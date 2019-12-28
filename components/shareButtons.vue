@@ -73,9 +73,9 @@ export default {
 .mdi {
   font-size: 2rem;
 }
-.button {
+button {
   background: transparent;
-  color: whitesmoke;
+  color: black;
   border: none;
   outline: none;
 }

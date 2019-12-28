@@ -1,6 +1,7 @@
 siteConfig:
   title: Ayushman Bilas Thakur
   url: https://www.ayushmanbthakur.com
+  email: ayushmanbilasthakur@gmail.com
 
 permalinks:
   post: /posts/:slug
@@ -10,3 +11,8 @@ plugins:
   - resolve: saber-plugin-query-posts
   - resolve: saber-plugin-prismjs
   - resolve: saber-plugin-sitemap
+  - resolve: saber-plugin-feed
+    options:
+      atomFeed: true
+      rss2Feed: true
+      jsonFeed: true

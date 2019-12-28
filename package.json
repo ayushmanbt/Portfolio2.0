@@ -19,6 +19,7 @@
     "prismjs": "^1.17.1",
     "saber": "^0.11.3",
     "saber-highlight-css": "^0.1.1",
+    "saber-plugin-feed": "^0.4.3",
     "saber-plugin-prismjs": "^0.2.4",
     "saber-plugin-query-posts": "^0.4.5",
     "saber-plugin-sitemap": "^0.4.0"
