@@ -4,14 +4,14 @@ date: 2020-01-01
 layout: default
 slug: link-shortener-backend
 desc: Let's make a simple backend with node.js and express which will help us to shorten links
-main_img: /new_year_card/thumbnail.png
+main_img: /shorten_link_backend/thumbnail.png
 tags: link_shortener, node.js, express,
 ---
 
 # Link Shortener Pt. 1 - Backend with node.js
 
 <div style="width: 100%; display: flex">
-<img src = "shorten_link_backend/thumbnail.png" class="thumbnail">
+<img src = "/shorten_link_backend/thumbnail.png" class="thumbnail">
 </div>
 
 I'm currently writing 31 posts in 31 days, and this is the post of day 2. Yesterday I made a post about making [personalized New Year's card](https://www.ayushmanbthakur.com/new-year-personalized-card). There I mentioned having the URL shortened will be nice. So, in this post we are going to make an URL shortener together. For this, we will need a database to store the shortened link, a backend API, and if possible a simple FrontEnd service. Without further adieu, let's jump right into making the app. In this post we will be going through the process of making the API for shortening links. In the next post I will be making the FrontEnd.
@@ -189,7 +189,7 @@ Now, as I told you before, POST request can't be handled by browser, so we will 
 
 So, open up postman and send post request to _localhost:2020/api/create_ and make sure to note these points:
 
-![](shorten_link_backend/request_via_postman_01.png)
+![](/shorten_link_backend/request_via_postman_01.png)
 
 ## Checking the URL if it is valid
 
@@ -223,11 +223,11 @@ Now it ts the time to test out if our _/api/create_ route is working or not.
 
 If we send valid url then I get a valid response:
 
-![](shorten_link_backend/Valid_request_01.png)
+![](/shorten_link_backend/Valid_request_01.png)
 
 If invalid URL is sent:
 
-![](shorten_link_backend/invalid_request_01.png)
+![](/shorten_link_backend/invalid_request_01.png)
 
 Now there is still one kind of error left, and that is if the URL parameter is not sent in the request body. For that I enhanced my code:
 
@@ -253,7 +253,7 @@ app.post("/api/create", (req, res) => {
 
 Here in JS I simply asked if _req.body.URL_ exists. If yes, then I let the previous code to execute, or otherwise I send a status code of 400 with the message of _NO URL passed_. Here is how it looks:
 
-![](shorten_link_backend/invalid_request_02.png)
+![](/shorten_link_backend/invalid_request_02.png)
 
 ## Generating an ID for the URL
 
@@ -291,7 +291,7 @@ Here I used the es6 notation for :
 
 After this response the response for valid POST request looks like this:
 
-![](shorten_link_backend/valid_request_02.png)
+![](/shorten_link_backend/valid_request_02.png)
 
 Now, as currently we don't have any frontend so it will be nice to have the generated URL sent with the response as well. For that I will be declaring baseURL at the initialization of the app:
 
@@ -318,7 +318,7 @@ res.status(201).send({
 
 Now the response looks like this:
 
-![](shorten_link_backend/valid_request_03.png)
+![](/shorten_link_backend/valid_request_03.png)
 
 If you are reading minutely then you will notice that we got two different IDs for the same URL. At this point we will need a database. I will use the lightweight **nedb**.
 
@@ -377,7 +377,7 @@ So here, I created an **URLobject** with the _shortid_ generated id, the shorten
 
 Next, I defined the callback, where, if any error was found status code 500 was sent with the error passed as the response object, otherwise, a status code of 201 was sent with the newObject as the response. Now the response will look similar to this:
 
-![](shorten_link_backend/db_added_01.png)
+![](/shorten_link_backend/db_added_01.png)
 
 Now if we send this request again then we will have another record in the name of same URL. We can't let that happen, to save storage.
 
@@ -422,7 +422,7 @@ db.findOne({ URL: req.body.URL }, (err, fndURL) => {
 
 Now, if we send the same URL again we will have the previous response:
 
-![](shorten_link_backend/db_added_01.png)
+![](/shorten_link_backend/db_added_01.png)
 
 ## Final Task: Redirecting to the original URL from the shortened link
 
@@ -460,7 +460,7 @@ app.get("/:id", (req, res) => {
 
 Now, let's open our website with the shortened URL stored:
 
-![](shorten_link_backend/final_product.gif)
+![](/shorten_link_backend/final_product.gif)
 
 So, our URL shortener works.
 
