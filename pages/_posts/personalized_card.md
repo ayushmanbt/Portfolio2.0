@@ -3,7 +3,7 @@ title: Personalized New Year Card - No Backend
 date: 2019-12-31
 layout: default
 slug: new-year-personalized-card
-desc: Having a complex backend to do simple jobs is really easy. Buy\t it is challenging to flex your knowledge of javascript and make a simple personalized card. Today we are going to make that.
+desc: Having a complex backend to do simple jobs is really easy. But it is challenging to flex your knowledge of javascript and make a simple personalized card. Today we are going to make that.
 main_img: /new_year_card/thumbnail.png
 tags: 2020, HTML, CSS, JS,
 ---

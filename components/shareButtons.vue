@@ -80,7 +80,7 @@ button {
   outline: none;
 }
 
-.dark-mode .button {
+.dark-mode button {
   color: #f0710a;
 }
 </style>
