@@ -429,7 +429,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 pre{
-    background: #011627 !important;
+    background: #111 !important;
     z-index: 0;
 }
 
@@ -437,7 +437,7 @@ pre *{
     background: transparent !important;
     text-shadow: none;
     color: #d6deeb;
-    
+    font-size: 1.1rem;
 }
 
 .dark-mode p, .dark-mode li{
@@ -450,11 +450,10 @@ img{
 
 p, li{
     color: #222;
+    font-size: 1.1rem;
+    margin: 5px 0;
 }
 li{
     margin-left: 20px;
 }
-
-
-
 </style>

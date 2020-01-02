@@ -56,7 +56,7 @@ ul {
 
 ul li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
