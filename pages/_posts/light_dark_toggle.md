@@ -1,6 +1,6 @@
 ---
 title: Light/Dark Mode Toggle
-date: 2019-12-26
+date: 2019-01-04
 layout: default
 slug: light-dark-toggle
 desc: Having a light and dark mode toggle in your website is becoming an essential feature day by day. So in this post we are going to create a light/dark mode toggle for our website
