@@ -20,11 +20,11 @@ If you notice properly, in my website there is a dark mode toggle button on the 
 
 To start with, we will need an HTML layout to work on. So, I came up with a simple layout. It looks something like:
 
-![](./pictures/design_dark_01.png)
+![](/light_dark_mode/design_dark_01.png)
 
 As I love dark mode I made it my default design. And in the light mode the design looks something like this:
 
-![](./pictures/design_light_01.png)
+![](/light_dark_mode/design_light_01.png)
 
 So, let's start writing this layout:
 
@@ -365,7 +365,7 @@ To make the transition smooth I gave the _transition: all 0.3s ease-in-out_ prop
 
 So, now our app is ready, and it works like this:
 
-![](./pictures/light_dark_final.gif)
+![](/light_dark_mode/light_dark_final.gif)
 
 The final code:
 
