@@ -10,6 +10,10 @@ tags: Light-Dark Mode, Light mode, Dark Mode, Toggle, HTML, CSS, JavaScript, JS,
 
 # Make a Simple Dark Mode for Your Website with CSS and JS
 
+<div style="width: 100%; display: flex">
+<img src = "/light_dark_mode/light_dark_final.gif" class="thumbnail">
+</div>
+
 If you notice properly, in my website there is a dark mode toggle button on the top left corner. If you click it the website will turn into light themed. If you want similar feature in your website, then it is really easy to do so. I will show you how.
 
 ## Making the HTML layout
