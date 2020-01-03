@@ -4,7 +4,7 @@ date: 2019-12-26
 layout: default
 slug: light-dark-toggle
 desc: Having a light and dark mode toggle in your website is becoming an essential feature day by day. So in this post we are going to create a light/dark mode toggle for our website
-main_img: /light_dark_mode/light_dark_final.gif
+main_img: /light_dark_mode/thumbnail.png
 tags: Light-Dark Mode, Light mode, Dark Mode, Toggle, HTML, CSS, JavaScript, JS, Light-Dark Mode,
 ---
 
