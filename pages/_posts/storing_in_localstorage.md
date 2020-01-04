@@ -3,7 +3,7 @@ title: A Simple Bookmarker App with LocalStorage
 date: 2020-01-04
 layout: default
 slug: bookmarker-with-localstorage
-desc: Having a light and dark mode toggle in your website is becoming an essential feature day by day. So in this post we are going to create a light/dark mode toggle for our website
+desc: There is a feature called localStorage in the browsers, which can be used to store client side data. So, you won't always need a server to store data from user. So, using this feature, we are going to make a site bookmarker app.
 main_img: /localstorage_bookmark_app/thumbnail.png
 tags: LoaclStorage, HTML5, JavaScript, JS,
 ---
