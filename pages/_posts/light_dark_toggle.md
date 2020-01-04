@@ -551,7 +551,7 @@ toggler.addEventListener('click', () => {
 
 ## Conclusion
 
-All the source code is uploaded on github at [https://github.com/AyushmanBilasThakur/light_dark_toggle](https://github.com/AyushmanBilasThakur/light_dark_toggle). The app is hosted [here](). I really enjoyed making this small utility. You can more enhance this app by adding the light class based on user preferences. Read more [here](https://www.freecodecamp.org/news/how-to-detect-a-users-preferred-color-scheme-in-javascript-ec8ee514f1ef/). Maybe, you can also use localStorage to persist what theme was last used by the user. Submit your version of this webpage in the comments down below for others to enjoy.
+All the source code is uploaded on github at [here](https://github.com/AyushmanBilasThakur/light_dark_toggle). The app is hosted [here](https://AyushmanBilasThakur.github.io/light_dark_toggle). I really enjoyed making this small utility. You can more enhance this app by adding the light class based on user preferences. Read more [here](https://www.freecodecamp.org/news/how-to-detect-a-users-preferred-color-scheme-in-javascript-ec8ee514f1ef/). Maybe, you can also use localStorage to persist what theme was last used by the user. Submit your version of this webpage in the comments down below for others to enjoy.
 
 <style scoped>
 h1,h2,h3,h4,h5,h6{
