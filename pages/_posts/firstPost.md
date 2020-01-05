@@ -8,12 +8,6 @@ main_img: /redux_vs_context_api/thumbnail.png
 tags: React, Redux, Context API, State Management
 ---
 
-# Redux vs Context API - My Thoughts
-
-<div style="width: 100%; display: flex">
-<img src = "/redux_vs_context_api/thumbnail.png" class="thumbnail">
-</div>
-
 I'm sure, if you have somehow stumbled upon this post, you have some basic knowledge of React or any component-based Front-End framework. These frameworks can store data in two ways namely - component level state and app-level state. It is really easy and always preferable to have a component-level state only. But sometimes we need app-level state management. For example - if you have a TodoList in one component and count of the total number of TODOs and number of done and undone TODOs in other components then it will be a better decision to use an app-level state. Without a component level state, you will need to pass the TODOs from component to component.
 
 In React there are mainly two ways to manage state. One is Redux. Redux can not only be used with React but also can be used with other frameworks.
@@ -307,38 +301,3 @@ So here we used an onClick event listener to fire up the **increaseNumber** func
 ## Conclusion
 
 According to me, the main advantage of Context API over Redux is that instead of importing actions and using them we get to manipulate the state directly on the component we are currently on. Context API is also easy to set up and is as effective as Redux. Moreover, Context API is the in-built solution, so you don't need to worry about third parties implementing new changes. So I would choose Context API to work with rather than Redux. But keep one thing in mind - Redux is the industry standard.
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>

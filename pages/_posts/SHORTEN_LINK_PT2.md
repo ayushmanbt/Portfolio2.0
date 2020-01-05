@@ -8,12 +8,6 @@ main_img: /shorten_link_pt2/thumbnail.png
 tags: link_shortener, node.js, express, handlebars,
 ---
 
-# Link Shortener Pt. 2 - Using Routers, Handlebars and Making a Simple FrontEnd
-
-<div style="width: 100%; display: flex">
-<img src = "/shorten_link_pt2/thumbnail.png" class="thumbnail">
-</div>
-
 So, in my [previous post](https://www.ayushmanbthakur.com/posts/link-shortener-backend) we created an express backend to shorten a given URL via http get and post requests. But, handling http requests is not possible for everyone. So, today we will be making a frontend for our app. We will be using handlebars to make the frontend. Using handlebars let us avoid the CORS issue.
 
 To start with, I highly recommend to read my [previous post](https://www.ayushmanbthakur.com/posts/link-shortener-backend) or to start with my [initial github repo](https://github.com/AyushmanBilasThakur/link_shortener).
@@ -524,38 +518,3 @@ There are still some ways, in which the frontend of the app can be improved. The
 2. Handling the form input errors in client side. It is not always good to rely on the server to send the errors, there should be some client side verifications as well
 
 It will be nice if anyone can create the versions with the updates I mentioned and comment it down for others to see.
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>

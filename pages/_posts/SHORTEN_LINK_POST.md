@@ -8,12 +8,6 @@ main_img: /shorten_link_backend/thumbnail.png
 tags: link_shortener, node.js, express,
 ---
 
-# Link Shortener Pt. 1 - Backend with node.js
-
-<div style="width: 100%; display: flex">
-<img src = "/shorten_link_backend/thumbnail.png" class="thumbnail">
-</div>
-
 I'm currently writing 31 posts in 31 days, and this is the post of day 2. Yesterday I made a post about making [personalized New Year's card](https://www.ayushmanbthakur.com/new-year-personalized-card). There I mentioned having the URL shortened will be nice. So, in this post we are going to make an URL shortener together. For this, we will need a database to store the shortened link, a backend API, and if possible a simple FrontEnd service. Without further adieu, let's jump right into making the app. In this post we will be going through the process of making the API for shortening links. In the next post I will be making the FrontEnd.
 
 ## Step 01: Installing the required packages
@@ -592,39 +586,3 @@ I don't think myself capable of explaining the process of hosting,, but I myself
 ## Conclusion
 
 This is not the conclusion of the project. As a part of my #31days31posts, on next day I will be making a frontend for this app. If you want to see my complete code here is the [GitHub Link](https://github.com/AyushmanBilasThakur/link_shortener)
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>
-

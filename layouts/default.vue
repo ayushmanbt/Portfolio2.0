@@ -30,11 +30,17 @@
           to="/blog"
           v-if="route.indexOf('/posts') != -1"
           class="back-to-blog"
-          >🔙 Back To Blog List</saber-link
-        >
+        >🔙 Back To Blog List</saber-link>
 
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
-        <slot name="default" style="margin-top: 10px;" />
+        <div class="blogPost" v-if="route.indexOf('/posts') != -1">
+          <h1>{{ page.title }}</h1>
+          <div style="width: 100%; display: flex">
+            <img :src="page.main_img" class="thumbnail" />
+          </div>
+          <slot name="default" style="margin-top: 10px;" />
+        </div>
+        <slot name="default" style="margin-top: 10px;" v-else />
         <div style="height: 10px;" v-if="route.indexOf('/posts') != -1"></div>
         <shareButtons :page="page" v-if="route.indexOf('/posts') != -1" />
         <div style="height: 20px;" v-if="route.indexOf('/posts') != -1"></div>
@@ -486,6 +492,60 @@ p {
 
 .width-restricted {
   max-width: 650px;
+}
+
+.blogPost h1,
+.blogPost h2,
+.blogPost h3,
+.blogPost h4,
+.blogPost h5,
+.blogPost h6 {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.blogPost pre {
+  background: #111 !important;
+  z-index: 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: white !important;
+}
+
+pre * {
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 1.1rem;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #990 !important;
+}
+
+.dark-mode .blogPost p,
+.dark-mode .blogPost li {
+  color: #bbb;
+}
+
+.blogPost img {
+  width: 100%;
+}
+
+.blogPost p,
+.blogPost li {
+  color: #222;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+.blogPost li {
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 750px) {

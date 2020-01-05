@@ -8,12 +8,6 @@ main_img: /light_dark_mode/thumbnail.png
 tags: Light-Dark Mode, Light mode, Dark Mode, Toggle, HTML, CSS, JavaScript, JS, Light-Dark Mode,
 ---
 
-# Make a Simple Dark Mode for Your Website with CSS and JS
-
-<div style="width: 100%; display: flex">
-<img src = "/light_dark_mode/light_dark_final.gif" class="thumbnail">
-</div>
-
 If you notice properly, in my website there is a dark mode toggle button on the top left corner. If you click it the website will turn into light themed. If you want similar feature in your website, then it is really easy to do so. I will show you how.
 
 ## Making the HTML layout
@@ -552,38 +546,3 @@ toggler.addEventListener('click', () => {
 ## Conclusion
 
 All the source code is uploaded on github at [here](https://github.com/AyushmanBilasThakur/light_dark_toggle). The app is hosted [here](https://AyushmanBilasThakur.github.io/light_dark_toggle). I really enjoyed making this small utility. You can more enhance this app by adding the light class based on user preferences. Read more [here](https://www.freecodecamp.org/news/how-to-detect-a-users-preferred-color-scheme-in-javascript-ec8ee514f1ef/). Maybe, you can also use localStorage to persist what theme was last used by the user. Submit your version of this webpage in the comments down below for others to enjoy.
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>

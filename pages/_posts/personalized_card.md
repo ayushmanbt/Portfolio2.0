@@ -8,12 +8,6 @@ main_img: /new_year_card/thumbnail.png
 tags: 2020, HTML, CSS, JS,
 ---
 
-# Making a Personalized New Year Wishing Card with no Backend
-
-<div style="width: 100%; display: flex">
-<img src = "/new_year_card/thumbnail.png" class="thumbnail">
-</div>
-
 As the New Year is approaching I wanted to make a personalized New year's card using HTML CSS and Javascript. But I did not want to use any backend like Node.js or Django, because:
 
 1. I wanted the site to be simple.
@@ -422,38 +416,3 @@ There are some things I could have improved, but due to timing constraints, I co
 Link to the final website: [link](https://2020-is-coming.netlify.com/)
 
 Here is the [GitHub Repo](https://github.com/AyushmanBilasThakur/newyearcard/). Make changes and comment below with your repo link for others to see your changes.
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>

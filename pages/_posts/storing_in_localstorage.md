@@ -8,12 +8,6 @@ main_img: /localstorage_bookmark_app/thumbnail.png
 tags: LoaclStorage, HTML5, JavaScript, JS,
 ---
 
-# A Simple Bookmarker App with localStorage
-
-<div style="width: 100%; display: flex">
-<img src = "/localstorage_bookmark_app/thumbnail.png" class="thumbnail">
-</div>
-
 There is a feature called localStorage in the browsers, which can be used to store client side data. So, you won't always need a server to store data from user. So, using this feature, we are going to make a site bookmarker app. But before that, let's know what localStorage is:
 
 ## Understanding the concept of localStorage
@@ -396,38 +390,3 @@ So the app is ready, but there are a lot of features we can implement, like:
 4. Turn this app into a chrome extension, which I might do for the next post.
 
 My code is available at [codepen](https://codepen.io/Ayushman_Bilas_Thakur/pen/LYEOKNq). This is the first app I have kept in codepen. I would appreciate if you comment below with your own version of this app.
-
-<style scoped>
-h1,h2,h3,h4,h5,h6{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-pre{
-    background: #111 !important;
-    z-index: 0;
-}
-
-pre *{
-    background: transparent !important;
-    text-shadow: none;
-    color: #d6deeb;
-    font-size: 1.1rem;
-}
-
-.dark-mode p, .dark-mode li{
-    color: #bbb;
-}
-
-img{
-    width: 100%;
-}
-
-p, li{
-    color: #222;
-    font-size: 1.1rem;
-    margin: 5px 0;
-}
-li{
-    margin-left: 20px;
-}
-</style>
