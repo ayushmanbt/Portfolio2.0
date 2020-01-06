@@ -511,12 +511,12 @@ p {
 code[class*="language-"],
 pre[class*="language-"] {
   color: white !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 pre * {
   background: transparent !important;
   text-shadow: none !important;
-  font-size: 1.1rem;
 }
 
 .token.property,

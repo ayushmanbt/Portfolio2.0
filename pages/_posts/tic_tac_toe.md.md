@@ -159,6 +159,7 @@ Now talking about hover I set the cursor to pointer and background to a bright g
 At this point the board looked fine but I wanted the classic look. Now, as the board is laid one by one the, the id of each div is like:
 
 ```
+Initial board:
  ___ ___ ___
 | 0 | 1 | 2 |
  ___ ___ ___
@@ -179,6 +180,8 @@ So we need to move out:
 Then only our board will be like this:
 
 ```
+Now board:
+
   0 | 1 | 2
  ___ ___ ___
   3 | 4 | 5
@@ -382,6 +385,8 @@ Now we need to define the check match function. There are four kinds of match po
 To understand the situation let's draw the index from the board array in the play area:
 
 ```
+Board:
+
   0 | 1 | 2
  ___ ___ ___
   3 | 4 | 5
