@@ -19,6 +19,10 @@
     <saber-link to="https://dev.to/ayushmanbthakur">
       <span class="mdi mdi-dev-to"></span>
     </saber-link>
+
+    <saber-link to="feeds://ayushmanbthakur.com/rss2.xml">
+      <span class="mdi mdi-rss"></span>
+    </saber-link>
   </div>
 </template>
 

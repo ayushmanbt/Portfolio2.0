@@ -334,6 +334,14 @@ body {
   outline: none;
 }
 
+#disqus_thread {
+  filter: invert(100%) hue-rotate(-180deg);
+}
+
+.dark-mode #disqus_thread {
+  filter: invert(0%);
+}
+
 * {
   margin: 0px;
   padding: 0px;

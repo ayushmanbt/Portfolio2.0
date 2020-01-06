@@ -19,6 +19,7 @@
         <span class="mdi mdi-twitter"></span>
       </a>
     </div>
+    <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog ">SUBSCRIBE</saber-link>
   </div>
   <!-- AddToAny END -->
 </template>
