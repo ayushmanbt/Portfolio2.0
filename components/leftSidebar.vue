@@ -174,5 +174,8 @@ img {
   p {
     display: none;
   }
+  .links{
+    margin-bottom: 30px;
+  }
 }
 </style>

@@ -15,6 +15,10 @@
     <saber-link to="mailto:ayushmanbilasthakur@gmail.com">
       <span class="mdi mdi-email"></span>
     </saber-link>
+
+    <saber-link to="https://dev.to/ayushmanbthakur">
+      <span class="mdi mdi-dev-to"></span>
+    </saber-link>
   </div>
 </template>
 
