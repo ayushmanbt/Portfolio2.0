@@ -1,11 +1,11 @@
 ---
-title: How to get started with Game Development
+title: Dumb Project: YouTube Video Watcher
 date: 2020-01-11
 layout: default
-slug: getting_started_with_game_development
+slug: youtube_video_watcher
 desc: Do you get lost into the autoplay of YouTube videos. Well no more. Get your video playing on your own page.
-main_img: /getting_started_with_game_development/thumbnail.png
-tags: Game Development, C#, Unity, Godot
+main_img: /youtube_video_watcher/thumbnail.png
+tags: HTML, CSS, HTML5, CSS3, JS, JavaScript
 ---
 
 I had no idea what to do so I made a crap?🤔 For today's post I made a small web app which takes YouTube ID of a video and will display it in a huge area. So, without further adieu let's jump into making this app. But first of all let's have a look at the app.
