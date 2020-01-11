@@ -1,5 +1,5 @@
 ---
-title: Dumb Project: YouTube Video Watcher
+title: Dumb Project - YouTube Video Watcher
 date: 2020-01-11
 layout: default
 slug: youtube_video_watcher
