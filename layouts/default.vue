@@ -74,7 +74,9 @@ export default {
       dark_mode_icon: "mdi-moon-waning-crescent",
       dark_mode_light_icon: "mdi-moon-waning-crescent",
       dark_mode_dark_icon: "mdi-weather-sunny",
-      route: this.$route.fullPath
+      route: this.$route.fullPath,
+      disqus_thread: "",
+      disqus_config: ""
     };
   },
   methods: {
@@ -85,6 +87,17 @@ export default {
         this.dark_mode_icon = this.dark_mode_dark_icon;
       } else {
         this.dark_mode_icon = this.dark_mode_light_icon;
+      }
+
+      if (disqus_thread != "") {
+        // console.log(
+        //   disqus_thread
+        //     .querySelector("iframe")
+        //     .contentWindow.document.querySelector("body")
+        // );
+        // disqus_thread
+        //   .querySelector("iframe")
+        //   .contentWindow.location.reload(true);
       }
 
       document.body.classList.toggle("dark-mode");
@@ -121,6 +134,7 @@ export default {
   mounted() {
     //google analytics
     window.dataLayer = window.dataLayer || [];
+    disqus_thread = document.getElementById("disqus_thread") || "";
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -151,7 +165,7 @@ export default {
       }, 200);
 
     if (this.route.indexOf("/posts") != -1) {
-      var disqus_config = function() {
+      disqus_config = function() {
         this.page.url = "https://www.ayushmanbthakur.com"; // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = this.route; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
@@ -310,7 +324,7 @@ body {
 .dark-mode-button {
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 15px;
   z-index: 100;
 }
 
@@ -335,12 +349,13 @@ body {
 }
 
 #disqus_thread {
-  filter: invert(100%) hue-rotate(-180deg);
+  background-color: #000000;
+  padding: 20px;
 }
 
-.dark-mode #disqus_thread {
+/* .dark-mode #disqus_thread {
   filter: invert(0%);
-}
+} */
 
 * {
   margin: 0px;
@@ -354,7 +369,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #c2ff9f;
+  background-color: #d1d1d1;
   display: none;
 }
 
@@ -383,7 +398,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #5475d1;
+  color: #375199;
   transition: all 0.3s ease-in-out;
 }
 
@@ -603,8 +618,8 @@ pre * {
   }
   .dark-mode-button {
     position: absolute;
-    top: 2px;
-    left: 32px;
+    top: 3px;
+    left: 36px;
     z-index: 2;
   }
   #left-bar {

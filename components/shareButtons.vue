@@ -1,14 +1,15 @@
 <template>
   <!-- AddToAny BEGIN -->
   <div>
-    <div v-if="navigator.share">
-      <button v-on:click="shareAPI()">
+    <h5>Share This Post:</h5>
+    <div v-if="navigator.share" class="flexed">
+      <button v-on:click="shareAPI()" class="button">
         Share
         <span class="mdi mdi-share"></span>
       </button>
+      <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog" class="button">SUBSCRIBE</saber-link>
     </div>
-    <div v-else>
-      <h5>Share This Post:</h5>
+    <div v-else class="flexed">
       <a :href="convertedURIFB()">
         <span class="mdi mdi-facebook"></span>
       </a>
@@ -18,8 +19,8 @@
       <a :href="convertedURITwitter()">
         <span class="mdi mdi-twitter"></span>
       </a>
+      <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog" class="button">SUBSCRIBE</saber-link>
     </div>
-    <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog ">SUBSCRIBE</saber-link>
   </div>
   <!-- AddToAny END -->
 </template>
@@ -48,11 +49,11 @@ export default {
       return `http://www.facebook.com/sharer.php?u=${this.location}`;
     },
     convertedURIWapp() {
-      return `https://api.whatsapp.com/send?text=${this.shareText +
+      return `https://api.whatsapp.com/send?text=${this.page.desc +
         this.location}`;
     },
     convertedURITwitter() {
-      return `https://twitter.com/share?url=${this.location}&amp;text=${this.shareText}`;
+      return `https://twitter.com/share?url=${this.location}&amp;text=${this.page.desc}`;
     },
     shareAPI() {
       navigator
@@ -74,14 +75,43 @@ export default {
 .mdi {
   font-size: 2rem;
 }
-button {
-  background: transparent;
-  color: black;
-  border: none;
-  outline: none;
+.flexed {
+  display: flex;
+  align-items: center;
 }
 
-.dark-mode button {
-  color: #f0710a;
+.flexed > * {
+  display: block;
+  margin: 10px 5px;
+}
+
+button,
+.button {
+  background: transparent;
+  cursor: pointer;
+  color: #375199;
+  border: 2px solid #375199;
+  padding: 10px 20px;
+  display: block;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.button:hover,
+button:hover {
+  background: #375199;
+  color: white;
+}
+
+.dark-mode button,
+.dark-mode .button {
+  color: #ff7c15;
+  border: 2px solid #ff7c15;
+}
+
+.dark-mode .button:hover {
+  background: #ff7c15;
+  color: black;
 }
 </style>

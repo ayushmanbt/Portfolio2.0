@@ -1,5 +1,5 @@
 <template>
-  <a class="download-resume" href="/Ayushman Bilas Thakur.pdf" download>Download Resume</a>
+  <a class="download-resume" href="/Ayushman Bilas Thakur.pdf" target=":blank">View Resume</a>
 </template>
 
 <style scoped>
