@@ -75,8 +75,6 @@ export default {
       dark_mode_light_icon: "mdi-moon-waning-crescent",
       dark_mode_dark_icon: "mdi-weather-sunny",
       route: this.$route.fullPath,
-      disqus_thread: "",
-      disqus_config: ""
     };
   },
   methods: {
@@ -87,17 +85,6 @@ export default {
         this.dark_mode_icon = this.dark_mode_dark_icon;
       } else {
         this.dark_mode_icon = this.dark_mode_light_icon;
-      }
-
-      if (disqus_thread != "") {
-        // console.log(
-        //   disqus_thread
-        //     .querySelector("iframe")
-        //     .contentWindow.document.querySelector("body")
-        // );
-        // disqus_thread
-        //   .querySelector("iframe")
-        //   .contentWindow.location.reload(true);
       }
 
       document.body.classList.toggle("dark-mode");
@@ -134,7 +121,6 @@ export default {
   mounted() {
     //google analytics
     window.dataLayer = window.dataLayer || [];
-    disqus_thread = document.getElementById("disqus_thread") || "";
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -165,7 +151,7 @@ export default {
       }, 200);
 
     if (this.route.indexOf("/posts") != -1) {
-      disqus_config = function() {
+      var disqus_config = function() {
         this.page.url = "https://www.ayushmanbthakur.com"; // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = this.route; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
