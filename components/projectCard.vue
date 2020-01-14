@@ -17,7 +17,7 @@
       <p class="details">{{data.description}}</p>
       <div class="links">
         <div v-for="link in data.links" :key="link.link">
-          <saber-link :to="link.link">
+          <saber-link :to="link.link" :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'">
             <span class="mdi mdi-github-circle" v-if="link.type === 'github'"></span>
             <span v-else class="mdi mdi-link"></span>
           </saber-link>

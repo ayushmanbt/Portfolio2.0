@@ -2,6 +2,7 @@ siteConfig:
   title: Ayushman Bilas Thakur
   url: https://www.ayushmanbthakur.com
   email: ayushmanbilasthakur@gmail.com
+  lang: en
 
 permalinks:
   post: /posts/:slug

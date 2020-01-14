@@ -10,13 +10,13 @@
       <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog" class="button">SUBSCRIBE</saber-link>
     </div>
     <div v-else class="flexed">
-      <a :href="convertedURIFB()">
+      <a :href="convertedURIFB()" aria-label="share via facebook">
         <span class="mdi mdi-facebook"></span>
       </a>
-      <a :href="convertedURIWapp()">
+      <a :href="convertedURIWapp()" aria-label="share via whatsapp">
         <span class="mdi mdi-whatsapp"></span>
       </a>
-      <a :href="convertedURITwitter()">
+      <a :href="convertedURITwitter()" aria-label="share via twitter">
         <span class="mdi mdi-twitter"></span>
       </a>
       <saber-link to="https://mailchi.mp/6b91c94b714d/subs_abt_blog" class="button">SUBSCRIBE</saber-link>

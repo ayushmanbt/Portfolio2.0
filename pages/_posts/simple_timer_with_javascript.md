@@ -1,5 +1,5 @@
 ---
-title: How to Make a Progressive Web App
+title: How to Make a Timer with Javascript
 date: 2020-01-07
 layout: default
 slug: simple_timer_with_js
@@ -10,7 +10,7 @@ tags: JavaScript, JS, Timer
 
 It is important in life to have track of time. So, today we are going to make a timer app in JavaScript. Let's get started with the markup.
 
-## THe Markup
+## The Markup
 
 After Linking the the _css_ and _js_ to our HTML app I cerated a container to get the app front and center. Inside the container I placed an h1 and with the heading of timer app, then I placed a div containing three input fields for hour minutes and seconds, used h2 tags for ':' between hour, minute and second display.
 
