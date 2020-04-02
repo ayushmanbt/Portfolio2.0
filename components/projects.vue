@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="section">
-      <h2 class="heading">OTHER PROECTS 🌈</h2>
+      <h2 class="heading">OTHER PROJECTS 🌈</h2>
       <div class="cards-container">
         <projectCard v-for="itsp in honorableMention" :key="itsp.title" :data="itsp" />
       </div>
