@@ -189,7 +189,7 @@ export default {
       link: [
         {
           rel: "icon",
-          href: "/favicon.ico"
+          href: "/my_new_logo.png"
         },
         {
           rel: "stylesheet",
