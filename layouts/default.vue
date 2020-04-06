@@ -10,14 +10,14 @@
     <div class="open-button" v-on:click="open()">
       <span class="mdi mdi-arrow-right-box"></span>
     </div>
-    <div id="left-bar">
+    <div id="left-bar" @touchstart="touchStartHandler($event)" @touchmove="touchMoveHandler($event)" @touchend="touchEndHandler($event)">
       <leftSidebar />
       <div class="cross-button" v-on:click="close()">
         <span class="mdi mdi-close-box"></span>
       </div>
     </div>
 
-    <div class="main-content-container">
+    <div class="main-content-container" @touchstart="touchStartHandler($event)" @touchmove="touchMoveHandler($event)" @touchend="touchEndHandler($event)" id="main-content-container">
       <div
         class="main-content"
         :class="
@@ -67,7 +67,7 @@ export default {
     leftSidebar,
     socialLinks,
     techIcon,
-    shareButtons
+    shareButtons,
   },
   data() {
     return {
@@ -75,6 +75,9 @@ export default {
       dark_mode_light_icon: "mdi-moon-waning-crescent",
       dark_mode_dark_icon: "mdi-weather-sunny",
       route: this.$route.fullPath,
+      swipeXStart: 0,
+      change: 0,
+      magic_swipe_number: 100,
     };
   },
   methods: {
@@ -88,6 +91,25 @@ export default {
       }
 
       document.body.classList.toggle("dark-mode");
+    },
+
+    touchStartHandler: function(e){
+      this.swipeXStart = e.touches[0].clientX;
+    },
+
+    touchMoveHandler: function(e){
+      let touch = e.touches[0];
+      this.change = this.swipeXStart - touch.clientX;
+    },
+
+    touchEndHandler: function(e){
+      if(this.change < -1 * this.magic_swipe_number){
+        this.open();
+      }
+      else if(this.change > this.magic_swipe_number){
+        this.close();
+      }
+      this.change = 0;
     },
 
     close: function() {
