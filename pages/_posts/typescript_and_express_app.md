@@ -5,7 +5,7 @@ layout: default
 slug: typescript_express_rest_api
 desc: TypeScript is an upcoming technology and a good way to learn typescript is to make a REST API with express and TypeScript
 main_img: /typescript_express_app/thumbnail.png
-tags: SCSS, SASS, CSS
+tags: TypeScript, TS, JavaScript, JS
 ---
 
 I don't want to convince people to use TypeScript. I just was recently using TypeScript and that's why I wanted to build a simple Transaction Tracker Application. As the scopes of a blog post is not enough so I will be building the simple version of this app, with just the CRUD functionality in a REST API. There will be no database involved to keep this post within limits. So, without further adieu let's start rolling. But just before starting all the code in this project is available in this [github repository](https://github.com/AyushmanBilasThakur/TypeScript_Express_REST_API).
