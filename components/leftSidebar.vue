@@ -5,7 +5,7 @@
         <img src="../images/me.jpeg" alt />
         <h1 class="heading">Ayushman Bilas Thakur</h1>
         <p>Fullstack web development</p>
-        <p>Part time blogging</p>
+        <p>Passionate about Blogging</p>
         <downloadResume class="downloadResume" />
       </div>
 
@@ -174,7 +174,7 @@ img {
   p {
     display: none;
   }
-  .links{
+  .links {
     margin-bottom: 30px;
   }
 }

@@ -1,22 +1,40 @@
-[{
+[
+  {
+    "title": "Software Developer",
+    "company_name": "Dressworm",
+    "technologies": ["Nuxt", "Firebase", "HTML5", "CSS3", "JavaScript"],
+    "date": "Jan 2020 - Mar 2020",
+    "description": "As a software developer at Dressworm I worked on handling Login, SignUP and Purchase preferences for users"
+  },
+  {
+    "title": "Web Developer",
+    "company_name": "MinD Webs",
+    "technologies": ["PHP", "Angular", "UI/UX"],
+    "description": "As a web developer for MinD webs under my senior Dipan Roy(https://dipanroy.com/) I worked on some projects running in MinD webs and also helped other junior developers to get used to the technologies we were using"
+  },
+  {
     "title": "FrontEnd Web Developer",
     "company_name": "Adben Industries Pvt. Ltd.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Django"],
-    "description": "Before I stepped in Adben Industries Pvt. Ltd. had no website. They wanted a website where they can tell people about their upcoming courses and products for IoT. I and my friend Ritankar Paul (check him out as well, he is an awesome guy!) made this website for Adben and the work is still in progress",
-    "links": [{
-      "type": "normal",
-      "link": "https://adben.in/"
-    }]
+    "description": "Before I stepped in Adben Industries Pvt. Ltd. had no website. They wanted a website where they can tell people about their upcoming courses and products for IoT. I and a senior of my college - Ritankar Paul (protfolio - https://www.xritzx.in/) made this website for Adben",
+    "links": [
+      {
+        "type": "normal",
+        "link": "https://adben.in/"
+      }
+    ]
   },
   {
-    "title": "Freelance Writer",
+    "title": "Content Writer",
     "company_name": "agatton.com.",
     "technologies": ["writing"],
-    "description": "As my first year internship, I worked as a freelance writer at agatton.com. I love writing content, you should check my blog in this portfolio",
-    "links": [{
-      "type": "normal",
-      "link": "https://agatton.com/author/ayushman5/"
-    }],
+    "description": "As my first year internship, I worked as a content writer at agatton.com. I love writing content, you should check my blog in this portfolio",
+    "links": [
+      {
+        "type": "normal",
+        "link": "https://agatton.com/author/ayushman5/"
+      }
+    ],
     "tileImage": "../images/agatton.png"
   }
 ]

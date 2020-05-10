@@ -12,5 +12,9 @@
   "writing": "mdi-typewriter",
   "mongodb": "mdi-database",
   "mysql": "mdi-database",
+  "nuxt": "mdi-nuxt",
+  "firebase": "mdi-firebase",
+  "php": "mdi-language-php",
+  "ui/ux": "mdi-material-design",
   "default": "mdi-cloud-question"
 }

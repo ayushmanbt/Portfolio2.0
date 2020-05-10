@@ -14,10 +14,15 @@
       </div>
     </div>
     <div class="bottom-details">
+      <p class="dates" v-if="data.date">{{data.date}}</p>
       <p class="details">{{data.description}}</p>
       <div class="links">
         <div v-for="link in data.links" :key="link.link">
-          <saber-link :to="link.link" :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'">
+          <saber-link
+            v-if="link_type !== 'refferal'"
+            :to="link.link"
+            :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'"
+          >
             <span class="mdi mdi-github-circle" v-if="link.type === 'github'"></span>
             <span v-else class="mdi mdi-link"></span>
           </saber-link>
@@ -95,6 +100,10 @@ export default {
   left: 10px;
 }
 
+.techs-container > * {
+  margin: 0 3px;
+}
+
 .mdi {
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
@@ -116,8 +125,13 @@ export default {
   font-size: 0.8rem;
 }
 
+.dates {
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
 .details {
-  padding: 10px 20px;
+  padding: 0px 15px;
 }
 
 .links {
@@ -149,7 +163,7 @@ export default {
     width: 95%;
   }
   .top-details p {
-    display: none;
+    font-size: 0.9rem;
   }
   .top-details h2 {
     font-size: 1.2rem !important;

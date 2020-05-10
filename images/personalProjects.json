@@ -1,9 +1,27 @@
-[{
+[
+  {
+    "title": "Odd N Even",
+    "company_name": "A game made with vanilla HTML, CSS and JS",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "description": "Odd N Even is a simple game where you are presented with a number and you have to click a button or use arrow keys or swipe on the screen(Android) to tell if that number is even or odd. This app is a PWA, so it can be installed in any device. This has a simple backend just to store the global leaderboard.",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/Odd_N_Even"
+      },
+      {
+        "type": "normal",
+        "link": "https://oddneven.netlify.app/"
+      }
+    ]
+  },
+  {
     "title": "QuotesApp",
     "company_name": "Flask + Angular 7 CRUD",
     "technologies": ["Angular", "Flask", "MongoDB"],
     "description": "A simple CRUD application where users can add data and can remove it(if local-storage stats are stored), Like and dislike others quotes",
-    "links": [{
+    "links": [
+      {
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/QuotesApp"
       },
@@ -18,7 +36,8 @@
     "company_name": "This very webpage",
     "technologies": ["VueJS"],
     "description": "This very webpage is one of my best frontend creations. Built with saber.js (a vue.js framework) this website is static-built like gatsby and is super fast. And using the full potential of React, there are a lot of things here",
-    "links": [{
+    "links": [
+      {
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/Portfolio2.0"
       },
@@ -32,8 +51,9 @@
     "title": "HandyWriter",
     "company_name": "A web based markdown writer",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
-    "description": "With the help of marked.js, this app turns your markdown to HTML to normal text and HTML",
-    "links": [{
+    "description": "With the help of marked.js, this app turns your markdown to HTML and normal text",
+    "links": [
+      {
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/HANDYWRITER"
       },
@@ -48,7 +68,8 @@
     "company_name": "Pure HTML,CSS,JS landing page",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
     "description": "Without using any frameworks like bootstrap, I made this landing page with parallax scrolling, animated buttons and scroll to posItion, this is basically a CSS showcase of my skills",
-    "links": [{
+    "links": [
+      {
         "type": "github",
         "link": "https://github.com/AyushmanBilasThakur/ReallySimpleParallexEffect"
       },

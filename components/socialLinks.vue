@@ -4,8 +4,8 @@
       <span class="mdi mdi-github-circle"></span>
     </saber-link>
 
-    <saber-link to="https://www.linkedin.com/in/ayushman-bilas-thakur-13162a16b/" aria-label="Ayushman's Linkein Profile">
-      <span class="mdi mdi-linkedin"></span>
+    <saber-link to="https://dev.to/ayushmanbthakur" aria-label="Ayushman's dev.to profile">
+      <span class="mdi mdi-dev-to"></span>
     </saber-link>
 
     <saber-link to="https://twitter.com/AyushmanBThakur" aria-label="Ayushman's Twitter Profile">
@@ -16,8 +16,11 @@
       <span class="mdi mdi-email"></span>
     </saber-link>
 
-    <saber-link to="https://dev.to/ayushmanbthakur" aria-label="Ayushman's dev.to profile">
-      <span class="mdi mdi-dev-to"></span>
+    <saber-link
+      to="https://www.linkedin.com/in/ayushman-bilas-thakur-13162a16b/"
+      aria-label="Ayushman's Linkein Profile"
+    >
+      <span class="mdi mdi-linkedin"></span>
     </saber-link>
 
     <saber-link to="feeds://ayushmanbthakur.com/rss2.xml" aria-label="RSS2 for Ayushman's Blog">
