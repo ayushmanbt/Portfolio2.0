@@ -1,7 +1,8 @@
 <template>
   <div class="card">
     <div class="top-img">
-      <img src="../images/computer.jpg" loading="lazy" :alt="data.title" />
+      <img :src="data.tileImage" v-if="data.tileImage" alt loading="lazy" :alt="data.title" />
+      <img src="../images/computer.jpg" v-else loading="lazy" :alt="data.title" />
 
       <div class="techs-container">
         <techIcon v-for="tech in data.technologies" :key="tech" :name="tech" :icon="rdi(tech)" />
@@ -14,12 +15,16 @@
       </div>
     </div>
     <div class="bottom-details">
-      <p class="dates" v-if="data.date">{{data.date}}</p>
+      <p class="dates" v-if="data.date">
+        <span class="mdi mdi-calendar"></span>
+        &nbsp;{{data.date}}
+      </p>
+      <p class="outdated" v-else></p>
       <p class="details">{{data.description}}</p>
       <div class="links">
         <div v-for="link in data.links" :key="link.link">
           <saber-link
-            v-if="link_type !== 'refferal'"
+            v-if="link.type !== 'refferal'"
             :to="link.link"
             :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'"
           >
@@ -84,10 +89,11 @@ export default {
   border-radius: 16px 16px 0 0;
 }
 .top-img img {
-  opacity: 0.7;
+  max-height: 350px;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
   border-radius: 20px 20px 0 0;
 }
 
@@ -128,6 +134,15 @@ export default {
 .dates {
   padding: 5px 15px;
   font-weight: bold;
+}
+
+.dates .mdi {
+  font-size: 1rem;
+}
+
+.outdated {
+  height: 10px;
+  width: 100%;
 }
 
 .details {

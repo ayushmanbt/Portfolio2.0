@@ -27,6 +27,7 @@ export default {
 .tech-name {
   animation: appear 0.3s ease-in-out alternate;
   display: none;
+  margin-left: 5px;
 }
 
 #individual-tech:active,

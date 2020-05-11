@@ -22,24 +22,8 @@
 </template>
 
 
-<script>
-// export const data = {
-//   layout: "default",
-//   title: ""
-// };
-export default {
-  mounted: {}
-};
-</script>
-
 
 <style scoped>
-/* h1 {
-  text-align: center;
-
-  
-} */
-
 .dark-mode form {
   background: #000;
 }

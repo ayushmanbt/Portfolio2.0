@@ -13,7 +13,8 @@
         "type": "normal",
         "link": "https://oddneven.netlify.app/"
       }
-    ]
+    ],
+    "tileImage": "/odd_n_even.gif"
   },
   {
     "title": "QuotesApp",
@@ -29,7 +30,8 @@
         "type": "normal",
         "link": "https://ayushmanbilasthakur.github.io/QuotesApp/"
       }
-    ]
+    ],
+    "tileImage": "/quotesapp.gif"
   },
   {
     "title": "Portfolio + Blog",
@@ -45,7 +47,8 @@
         "type": "normal",
         "link": "https://www.ayushmanbthakur.com"
       }
-    ]
+    ],
+    "tileImage": "/portfolio2.0.gif"
   },
   {
     "title": "HandyWriter",
@@ -61,7 +64,8 @@
         "type": "normal",
         "link": "https://ayushmanbilasthakur.github.io/HANDYWRITER/"
       }
-    ]
+    ],
+    "tileImage": "/HandyWrite.gif"
   },
   {
     "title": "Simple Parallax Effect",
@@ -77,6 +81,7 @@
         "type": "normal",
         "link": "https://ayushmanbilasthakur.github.io/ReallySimpleParallexEffect/"
       }
-    ]
+    ],
+    "tileImage": "/lilyos.gif"
   }
 ]

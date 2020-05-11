@@ -39,7 +39,7 @@
     </div>
     <br />
     <h1 class="heading">HOBBIES 🤔</h1>
-    <div class="skill-part">
+    <div class="skill-block">
       <skills name="UI/UX Development" mdi="mdi-cellphone" color="#000000" />
       <skills name="Blog Writing" mdi="mdi-typewriter" />
     </div>
