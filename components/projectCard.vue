@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="top-img">
-      <img :src="data.tileImage" v-if="data.tileImage" alt loading="lazy" :alt="data.title" />
+      <img :src="data.tileImage" v-if="data.tileImage" loading="lazy" :alt="data.title" />
       <img src="../images/computer.jpg" v-else loading="lazy" :alt="data.title" />
 
       <div class="techs-container">
@@ -21,18 +21,23 @@
       </p>
       <p class="outdated" v-else></p>
       <p class="details">{{data.description}}</p>
+      
+
       <div class="links">
         <div v-for="link in data.links" :key="link.link">
-          <saber-link
-            v-if="link.type !== 'refferal'"
-            :to="link.link"
-            :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'"
-          >
-            <span class="mdi mdi-github-circle" v-if="link.type === 'github'"></span>
-            <span v-else class="mdi mdi-link"></span>
-          </saber-link>
+            <saber-link
+              v-if="link.type !== 'refferal'"
+              :to="link.link"
+              :aria-label="link.type == 'github' ? 'Github Project Link' : 'Hosted Link For The Project'"
+            >
+              <span class="mdi mdi-github-circle" v-if="link.type === 'github'"></span>
+              <span v-else class="mdi mdi-link"></span>
+            </saber-link>
         </div>
       </div>
+
+
+
     </div>
   </div>
 </template>
@@ -153,8 +158,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .links > * {
