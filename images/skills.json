@@ -36,6 +36,11 @@
     "color": "#005403"
   },
   {
+    "name": "PHP",
+    "mdi": "mdi-language-php",
+    "color": "#2965F1"
+  },
+  {
     "name": "Flask(Python)",
     "mdi": "mdi-server",
     "color": "#2965F1"
@@ -46,8 +51,8 @@
     "color": "#EE1E1E"
   },
   {
-    "name": "Unity + C# Game Development",
-    "mdi": "mdi-unity",
-    "color": "#000000"
+    "name": "Python",
+    "mdi": "mdi-language-python",
+    "color": "yellow"
   }
 ]

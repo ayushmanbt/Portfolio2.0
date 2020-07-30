@@ -34,8 +34,8 @@
     <div class="skill-part">
       <skillBlock heading="WEB DEV ESSENTIALS" :skills="JSON.stringify(skl.slice(0,3))" />
       <skillBlock heading="FRONTEND FRAMEWORKS" :skills="JSON.stringify(skl.slice(3,6))" />
-      <skillBlock heading="BACKEND TECHNOLOGIES" :skills="JSON.stringify(skl.slice(6,8))" />
-      <skillBlock heading="OTHERS" :skills="JSON.stringify(skl.slice(8,10))" />
+      <skillBlock heading="BACKEND TECHNOLOGIES" :skills="JSON.stringify(skl.slice(6,9))" />
+      <skillBlock heading="OTHERS" :skills="JSON.stringify(skl.slice(9,12))" />
     </div>
     <br />
     <h1 class="heading">HOBBIES 🤔</h1>
