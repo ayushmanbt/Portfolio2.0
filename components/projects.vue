@@ -13,12 +13,12 @@
         <projectCard v-for="itsp in personalProjects" :key="itsp.title" :data="itsp" />
       </div>
     </div>
-    <div class="section">
+    <!-- <div class="section">
       <h2 class="heading">OTHER PROECTS 🌈</h2>
       <div class="cards-container">
         <projectCard v-for="itsp in honorableMention" :key="itsp.title" :data="itsp" />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
