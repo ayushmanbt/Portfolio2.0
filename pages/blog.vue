@@ -2,6 +2,8 @@
   <div>
     <h1 class="heading">BLOGS 😎</h1>
 
+    <h3>Most of my recent Vlogs are posted to <saber-link to="https://dev.to/ayushmanbthakur">dev.to</saber-link></h3>
+
     <div class="recent-posts" v-if="page.posts">
       <ul>
         <li v-for="post in page.posts" :key="post.permalink">
