@@ -20,7 +20,7 @@
         &nbsp;{{data.date}}
       </p>
       <p class="outdated" v-else></p>
-      <p class="details">{{data.description}}</p>
+      <p class="details" v-html="data.description"></p>
       
 
       <div class="links">
@@ -92,6 +92,7 @@ export default {
   color: #eee;
   position: relative;
   border-radius: 16px 16px 0 0;
+  min-height: 80px;
 }
 .top-img img {
   max-height: 350px;

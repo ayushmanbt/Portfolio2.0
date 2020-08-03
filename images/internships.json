@@ -11,14 +11,14 @@
     "company_name": "MinD Webs",
     "technologies": ["PHP", "Angular", "UI/UX"],
     "date": "Sep 2019",
-    "description": "As a web developer for MinD webs under my senior Dipan Roy(https://dipanroy.com/) I worked on some projects running in MinD webs and also helped other junior developers to get used to the technologies we were using"
+    "description": "As a web developer for MinD webs under my senior <a href='https://www.dipanroy.com/' target='_blank' rel='noopener noreferrer'>Diapn Roy(Lead Dev)</a> I worked on some projects running in MinD webs and also helped other junior developers to get used to the technologies we were using"
   },
   {
     "title": "FrontEnd Web Developer",
     "company_name": "Adben Industries Pvt. Ltd.",
     "date": "Nov. 2019 - Dec. 2019",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Django"],
-    "description": "Before I stepped in Adben Industries Pvt. Ltd. had no website. They wanted a website where they can tell people about their upcoming courses and products for IoT. I and a senior of my college - Ritankar Paul (protfolio - https://www.xritzx.in/) made this website for Adben",
+    "description": "Before I stepped in Adben Industries Pvt. Ltd. had no website. They wanted a website where they can tell people about their upcoming courses and products for IoT. I and a senior of my college - <a href='https://www.xritzx.in/' target='_blank' rel='noopener noreferrer'>Ritankar Paul</a> made this website for Adben",
     "links": [
       {
         "type": "normal",

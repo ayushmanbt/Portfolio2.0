@@ -48,6 +48,12 @@
     <Projects id="#projects" />
     <br />
 
+    <h1 class="heading">Backend Code⚠</h1>
+    <p>
+      I generally feel paranoid to make my backend code public so there are some rough projects hosted at
+      <a href='https://glitch.com/@AyushmanBilasThakur' target='_blank' rel='noopener noreferrer'>Glitch.com</a>
+    </p>
+
     <Contact />
   </div>
 </template>

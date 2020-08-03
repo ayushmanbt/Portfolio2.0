@@ -1,5 +1,21 @@
 [
   {
+    "title": "Tap Timer",
+    "company_name": "A Stopwatch with some extra functionalities in Angular",
+    "technologies": ["Angular"],
+    "description": "In collaboration with <a href='https://www.dipanroy.com/' target='_blank' rel='noopener noreferrer'>Diapn Roy(Lead Dev)</a> & <a href='https://www.aayushagarwal.me/' target='_blank' rel='noopener noreferrer'>Aayush Agarwal(Designer)</a> this stopwatch on steroids was made",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/dipan29/Prod-Watch"
+      },
+      {
+        "type": "normal",
+        "link": "https://productivity-stopwatch.netlify.app/"
+      }
+    ]
+  },
+  {
     "title": "Odd N Even",
     "company_name": "A game made with vanilla HTML, CSS and JS",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
