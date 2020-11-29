@@ -1,5 +1,12 @@
 [
   {
+    "title": "Fullstack Web Developer",
+    "company_name": "Kesowa Ventures",
+    "technologies": ["React", "Express", "JavaScript"],
+    "date": "September 2020 - Now",
+    "description": "As a fullstack web developer at Kesowa I worked on API Creation, UI development and taking important desicions regarding the construction of the app"
+  },
+  {
     "title": "Software Developer",
     "company_name": "Dressworm",
     "technologies": ["Nuxt", "Firebase", "HTML5", "CSS3", "JavaScript"],
