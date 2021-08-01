@@ -1,5 +1,21 @@
 [
   {
+    "title": "Experimental Portfolio",
+    "company_name": "A portfolio with experimental features",
+    "technologies": ["Nuxt"],
+    "description": "This is a portfolio with Windows 10, Macos and Android look based on the device width",
+    "links": [
+      {
+        "type": "github",
+        "link": "https://github.com/AyushmanBilasThakur/experimental_portfolio"
+      },
+      {
+        "type": "normal",
+        "link": "https://productivity-stopwatch.netlify.app/"
+      }
+    ]
+  },
+  {
     "title": "Tap Timer",
     "company_name": "A Stopwatch with some extra functionalities in Angular",
     "technologies": ["Angular"],
